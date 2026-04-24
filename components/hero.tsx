@@ -178,7 +178,7 @@ export function Hero() {
       {/* ── Prev / Next arrows — on mobile sit at ~35% so they clear the text block ── */}
       <button
         onClick={back}
-        className="absolute left-5 top-[35%] md:top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-200 hover:bg-white/20"
+        className="absolute left-5 top-[42%] md:top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-200 hover:bg-white/20"
         style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.25)", backdropFilter: "blur(8px)" }}
         aria-label="Previous slide"
       >
@@ -186,7 +186,7 @@ export function Hero() {
       </button>
       <button
         onClick={next}
-        className="absolute right-5 top-[35%] md:top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-200 hover:bg-white/20"
+        className="absolute right-5 top-[42%] md:top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-200 hover:bg-white/20"
         style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.25)", backdropFilter: "blur(8px)" }}
         aria-label="Next slide"
       >
