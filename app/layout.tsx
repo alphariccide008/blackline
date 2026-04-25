@@ -4,6 +4,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { Preloader } from "@/components/preloader"
 import { ChatWidget } from "@/components/chat-widget"
 import { CartProvider } from "@/lib/cart-context"
+import { BriefCartBar } from "@/components/brief-cart-bar"
 
 export const metadata: Metadata = {
   title: "BLACKLINE — Precision Over Noise",
@@ -29,6 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <CartProvider>
             <Preloader />
             {children}
+            <BriefCartBar />
             <ChatWidget />
           </CartProvider>
         </ThemeProvider>

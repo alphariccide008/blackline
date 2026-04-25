@@ -10,8 +10,8 @@ import { useCart } from "@/lib/cart-context"
 import { motion, AnimatePresence } from "framer-motion"
 import {
   MapPin, ArrowLeft, Eye, Zap, CheckCircle2,
-  Plus, Check, ChevronRight, ShoppingBag,
-  LayoutGrid, Maximize2, Navigation,
+  Plus, Check, ChevronRight, ShoppingBag, LayoutGrid,
+  Maximize2, Navigation,
 } from "lucide-react"
 
 const trafficMap: Record<string, string> = {
@@ -359,38 +359,6 @@ export default function BillboardDetailPage() {
           </div>
         </div>
       </section>
-
-      {/* Floating brief bar */}
-      <AnimatePresence>
-        {items.length > 0 && (
-          <motion.div
-            initial={{ y: 100, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: 100, opacity: 0 }}
-            transition={{ type: "spring", stiffness: 260, damping: 26 }}
-            className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-lg"
-          >
-            <Link
-              href="/billboards/brief"
-              className="flex items-center justify-between gap-4 px-6 py-4 rounded-2xl text-white shadow-2xl"
-              style={{ background: "#082A7B", border: "1px solid rgba(75,115,212,0.3)" }}
-            >
-              <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-xl flex items-center justify-center bg-white/15">
-                  <ShoppingBag className="h-4 w-4" />
-                </div>
-                <div>
-                  <p className="text-xs font-black">{items.length} billboard{items.length !== 1 ? "s" : ""} selected</p>
-                  <p className="text-[10px] text-white/55">Ready to create your brief</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-1.5 text-sm font-black">
-                Create Brief <ChevronRight className="h-4 w-4" />
-              </div>
-            </Link>
-          </motion.div>
-        )}
-      </AnimatePresence>
 
       <Footer />
     </main>

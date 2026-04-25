@@ -5,9 +5,11 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import {
   Menu, X, ChevronDown, Lightbulb, Palette, Megaphone, Monitor,
-  Calendar, GraduationCap, BarChart2, MapPin,
+  Calendar, GraduationCap, BarChart2, MapPin, ShoppingBag,
 } from "lucide-react"
 import { ThemeToggle } from "@/components/theme-toggle"
+import { useCart } from "@/lib/cart-context"
+import { motion, AnimatePresence } from "framer-motion"
 
 const services = [
   { name: "Brand Strategy",           href: "/services#strategy",    icon: Lightbulb },
@@ -26,6 +28,7 @@ export function Header() {
   const [servicesOpen,       setServicesOpen]       = useState(false)
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
   const pathname = usePathname()
+  const { items } = useCart()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 30)
@@ -143,6 +146,34 @@ export function Header() {
           {/* Right CTAs */}
           <div className="hidden lg:flex items-center gap-3">
             <ThemeToggle />
+
+            {/* Brief cart button */}
+            <Link
+              href="/billboards/brief"
+              className="relative flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-bold text-white transition-all duration-300 hover:opacity-90"
+              style={{ background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.12)" }}
+            >
+              <ShoppingBag className="h-4 w-4" style={{ color: items.length > 0 ? "#4B73D4" : "rgba(237,237,237,0.5)" }} />
+              <span style={{ color: items.length > 0 ? "#EDEDED" : "rgba(237,237,237,0.5)" }}>Brief</span>
+
+              {/* Animated badge */}
+              <AnimatePresence>
+                {items.length > 0 && (
+                  <motion.span
+                    key={items.length}
+                    initial={{ scale: 0, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    exit={{ scale: 0, opacity: 0 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 18 }}
+                    className="absolute -top-1.5 -right-1.5 min-w-[18px] h-[18px] rounded-full flex items-center justify-center text-[10px] font-black text-white"
+                    style={{ background: "#4B73D4", boxShadow: "0 0 0 2px #0A0A0C" }}
+                  >
+                    {items.length}
+                  </motion.span>
+                )}
+              </AnimatePresence>
+            </Link>
+
             <Link
               href="/#brief"
               className="px-6 py-2.5 rounded-full text-sm font-bold text-white transition-all duration-300 hover:opacity-90 hover:shadow-lg"
@@ -155,6 +186,32 @@ export function Header() {
           {/* Mobile toggle */}
           <div className="lg:hidden flex items-center gap-2">
             <ThemeToggle />
+
+            {/* Mobile brief cart icon */}
+            <Link
+              href="/billboards/brief"
+              className="relative p-2 rounded-xl transition-all duration-200"
+              style={{ border: "1px solid rgba(255,255,255,0.12)", background: "rgba(255,255,255,0.07)" }}
+              aria-label="View brief"
+            >
+              <ShoppingBag className="h-5 w-5" style={{ color: items.length > 0 ? "#4B73D4" : "rgba(237,237,237,0.6)" }} />
+              <AnimatePresence>
+                {items.length > 0 && (
+                  <motion.span
+                    key={items.length}
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    exit={{ scale: 0 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 18 }}
+                    className="absolute -top-1 -right-1 min-w-[16px] h-4 rounded-full flex items-center justify-center text-[9px] font-black text-white"
+                    style={{ background: "#4B73D4", boxShadow: "0 0 0 2px #0A0A0C" }}
+                  >
+                    {items.length}
+                  </motion.span>
+                )}
+              </AnimatePresence>
+            </Link>
+
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
               className="p-2 rounded-xl transition-all duration-200"
