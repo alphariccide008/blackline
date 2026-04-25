@@ -71,8 +71,9 @@ export function Header() {
           {/* Desktop nav */}
           <nav className="hidden lg:flex items-center gap-8">
             {[
-              { href: "/",        label: "Home" },
-              { href: "/projects",label: "Work" },
+              { href: "/",           label: "Home" },
+              { href: "/projects",   label: "Work" },
+              { href: "/billboards", label: "Billboards" },
             ].map((l) => (
               <Link
                 key={l.href}
@@ -170,11 +171,12 @@ export function Header() {
           <div className="lg:hidden py-6 animate-slide-down" style={{ borderTop: "1px solid rgba(255,255,255,0.07)", background: "rgba(10,10,12,0.98)", backdropFilter: "blur(20px)" }}>
             <nav className="space-y-1">
               {[
-                { href: "/",        label: "Home" },
-                { href: "/projects",label: "Work" },
-                { href: "/about",   label: "About" },
-                { href: "/blog",    label: "Insights" },
-                { href: "/contact", label: "Contact" },
+                { href: "/",           label: "Home" },
+                { href: "/projects",   label: "Work" },
+                { href: "/billboards", label: "Billboards" },
+                { href: "/about",      label: "About" },
+                { href: "/blog",       label: "Insights" },
+                { href: "/contact",    label: "Contact" },
               ].map((l) => (
                 <Link
                   key={l.href}

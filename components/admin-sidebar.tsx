@@ -5,7 +5,7 @@ import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation"
 import {
   LayoutDashboard, Megaphone, MessageCircle,
-  Users, Settings, LogOut, Menu, X,
+  Users, Settings, LogOut, Menu, X, MapPin,
 } from "lucide-react"
 
 const SESSIONS_KEY = "bl_live_chats"
@@ -18,11 +18,12 @@ function getLiveUnread(): number {
 }
 
 const navItems = [
-  { href: "/admin",           icon: LayoutDashboard, label: "Dashboard" },
-  { href: "/admin/campaigns", icon: Megaphone,       label: "Campaigns" },
-  { href: "/admin/enquiries", icon: MessageCircle,   label: "Enquiries", badge: true },
-  { href: "/admin/clients",   icon: Users,           label: "Clients" },
-  { href: "/admin/settings",  icon: Settings,        label: "Settings" },
+  { href: "/admin",            icon: LayoutDashboard, label: "Dashboard" },
+  { href: "/admin/campaigns",  icon: Megaphone,       label: "Campaigns" },
+  { href: "/admin/billboards", icon: MapPin,          label: "Billboards" },
+  { href: "/admin/enquiries",  icon: MessageCircle,   label: "Enquiries", badge: true },
+  { href: "/admin/clients",    icon: Users,           label: "Clients" },
+  { href: "/admin/settings",   icon: Settings,        label: "Settings" },
 ]
 
 export function AdminSidebar() {
