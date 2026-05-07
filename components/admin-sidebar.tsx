@@ -49,14 +49,11 @@ export function AdminSidebar() {
   const SidebarContent = () => (
     <div className="flex flex-col h-full">
       {/* Logo */}
-      <div className="px-5 py-6 border-b border-white/6">
+        <div className="px-5 py-6 border-b border-white/6">
         <Link href="/admin" className="flex items-center gap-2.5">
-          <svg width="32" height="32" viewBox="0 0 72 72" fill="none">
-            <rect x="2" y="2" width="68" height="68" rx="14" stroke="#082A7B" strokeWidth="2" />
-            <text x="36" y="46" textAnchor="middle" fill="#082A7B" fontSize="22" fontWeight="900" fontFamily="Poppins, sans-serif" letterSpacing="-1">BL</text>
-          </svg>
+          <img src="/@logo.PNG" alt="Loechsar" width={32} height={32} className="w-8 h-8 object-contain" />
           <div className="flex flex-col leading-none">
-            <span className="text-sm font-black text-white">BLACKLINE</span>
+            <span className="text-sm font-black text-white">LOECHSAR</span>
             <span className="text-[9px] tracking-widest text-white/30 uppercase">Admin</span>
           </div>
         </Link>
@@ -76,7 +73,7 @@ export function AdminSidebar() {
                   ? "text-white"
                   : "text-white/40 hover:text-white/80 hover:bg-white/5"
               }`}
-              style={active ? { background: "rgba(8,42,123,0.4)", color: "#fff" } : {}}
+              style={active ? { background: "rgba(194,164,109,0.22)", color: "#fff" } : {}}
             >
               <Icon className="h-4 w-4 flex-shrink-0" />
               {label}
@@ -116,11 +113,8 @@ export function AdminSidebar() {
       {/* Mobile top bar */}
       <div className="lg:hidden fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-5 py-4" style={{ background: "#050811", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
         <Link href="/admin" className="flex items-center gap-2.5">
-          <svg width="28" height="28" viewBox="0 0 72 72" fill="none">
-            <rect x="2" y="2" width="68" height="68" rx="14" stroke="#082A7B" strokeWidth="2" />
-            <text x="36" y="46" textAnchor="middle" fill="#082A7B" fontSize="22" fontWeight="900" fontFamily="Poppins, sans-serif" letterSpacing="-1">BL</text>
-          </svg>
-          <span className="text-sm font-black text-white">BLACKLINE Admin</span>
+          <img src="/@logo.PNG" alt="Loechsar" width={28} height={28} className="w-7 h-7 object-contain" />
+          <span className="text-sm font-black text-white">LOECHSAR Admin</span>
         </Link>
         <button onClick={() => setOpen(!open)} className="text-white/60 hover:text-white">
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}

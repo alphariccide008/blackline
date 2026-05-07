@@ -18,17 +18,17 @@ export default function ServicesPage() {
       <Header />
 
       <section className="relative pt-40 pb-24 overflow-hidden" style={{ background: "#0A0A0C" }}>
-        <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse 70% 50% at 50% 0%, rgba(8,42,123,0.14), transparent)" }} />
+        <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse 70% 50% at 50% 0%, rgba(194,164,109,0.14), transparent)" }} />
         <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
           <div className="flex items-center gap-3 mb-8">
-            <div className="w-8 h-px" style={{ background: "#082A7B" }} />
-            <span className="text-[9px] font-black uppercase tracking-[0.38em]" style={{ color: "#4B73D4" }}>Services</span>
+            <div className="w-8 h-px" style={{ background: "#C2A46D" }} />
+            <span className="text-[9px] font-black uppercase tracking-[0.38em]" style={{ color: "#C2A46D" }}>Services</span>
           </div>
-          <h1 className="text-[clamp(3rem,8vw,7rem)] font-black tracking-tight leading-none mb-8" style={{ color: "#EDEDED" }}>
-            Seven Disciplines.<br /><span style={{ color: "#4B73D4" }}>One System.</span>
+          <h1 className="text-[clamp(3rem,8vw,7rem)] font-black tracking-tight leading-none mb-8" style={{ color: "#F3F1EC" }}>
+            Seven Disciplines.<br /><span style={{ color: "#C2A46D" }}>One System.</span>
           </h1>
-          <p className="text-base md:text-lg max-w-xl leading-relaxed" style={{ color: "rgba(237,237,237,0.58)" }}>
-            Every service BLACKLINE offers compounds with the others. None compete — all connect.
+          <p className="text-base md:text-lg max-w-xl leading-relaxed" style={{ color: "rgba(243,241,236,0.7)" }}>
+            Every service LO ECHSAR offers compounds with the others. None compete — all connect.
           </p>
         </div>
       </section>
@@ -40,12 +40,12 @@ export default function ServicesPage() {
               <div className={`relative overflow-hidden ${i % 2 === 1 ? "lg:order-2" : ""}`} style={{ minHeight: 320 }}>
                 <img src={s.image} alt={s.title} className="w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
                 <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, transparent 40%, rgba(0,0,0,0.5) 100%)" }} />
-                <div className="absolute top-5 left-5 w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "#082A7B" }}>
+                <div className="absolute top-5 left-5 w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "#C2A46D" }}>
                   <s.Icon className="h-5 w-5 text-white" />
                 </div>
               </div>
               <div className={`p-8 lg:p-12 flex flex-col justify-center ${i % 2 === 1 ? "lg:order-1" : ""}`}>
-                <div className="text-[9px] font-black uppercase tracking-[0.35em] mb-4" style={{ color: "#4B73D4" }}>{s.tagline}</div>
+                <div className="text-[9px] font-black uppercase tracking-[0.35em] mb-4" style={{ color: "#C2A46D" }}>{s.tagline}</div>
                 <h2 className="text-2xl md:text-3xl font-black mb-4" style={{ color: "#EDEDED" }}>{s.title}</h2>
                 <p className="text-sm leading-relaxed mb-8" style={{ color: "rgba(237,237,237,0.58)" }}>{s.desc}</p>
                 <div>
@@ -53,7 +53,7 @@ export default function ServicesPage() {
                   <ul className="space-y-2">
                     {s.deliverables.map((d) => (
                       <li key={d} className="flex items-center gap-3 text-sm" style={{ color: "rgba(237,237,237,0.65)" }}>
-                        <div className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: "#4B73D4" }} />
+                        <div className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: "#C2A46D" }} />
                         {d}
                       </li>
                     ))}
@@ -69,7 +69,7 @@ export default function ServicesPage() {
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-4xl font-black mb-6" style={{ color: "#EDEDED" }}>Ready to Build?</h2>
           <p className="text-sm mb-10 max-w-lg mx-auto" style={{ color: "rgba(237,237,237,0.55)" }}>Start with a brief. We&apos;ll scope it precisely and recommend the disciplines that apply.</p>
-          <a href="/#brief" className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-sm font-black text-white hover:opacity-85 transition-all" style={{ background: "#082A7B" }}>
+          <a href="/#brief" className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-sm font-black text-white hover:opacity-85 transition-all" style={{ background: "#C2A46D" }}>
             Build a Brief →
           </a>
         </div>

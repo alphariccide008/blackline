@@ -12,7 +12,7 @@ export function ContactSection() {
 
   return (
     <section id="contact" className="py-32 relative overflow-hidden" style={{ background: "#111115" }}>
-      <div className="absolute top-0 left-0 w-1/2 h-full pointer-events-none" style={{ background: "radial-gradient(ellipse at left, rgba(8,42,123,0.1), transparent 65%)" }} />
+      <div className="absolute top-0 left-0 w-1/2 h-full pointer-events-none" style={{ background: "radial-gradient(ellipse at left, rgba(194,164,109,0.1), transparent 65%)" }} />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
@@ -25,8 +25,8 @@ export function ContactSection() {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
             <div className="flex items-center gap-3 mb-8">
-              <div className="w-8 h-px" style={{ background: "#082A7B" }} />
-              <span className="text-[9px] font-black uppercase tracking-[0.38em]" style={{ color: "#4B73D4" }}>Direct Access</span>
+              <div className="w-8 h-px" style={{ background: "var(--primary)" }} />
+              <span className="text-[9px] font-black uppercase tracking-[0.38em]" style={{ color: "var(--primary)" }}>Direct Access</span>
             </div>
 
             <h2 className="text-[clamp(2.4rem,5vw,4rem)] font-black tracking-tight leading-none mb-6" style={{ color: "#EDEDED" }}>
@@ -39,12 +39,12 @@ export function ContactSection() {
 
             <div className="space-y-5">
               {[
-                { Icon: Mail,   label: "hello@blackline.com" },
+                { Icon: Mail,   label: "hello@loechsar.com" },
                 { Icon: MapPin, label: "Lagos / Global" },
               ].map(({ Icon, label }) => (
                 <div key={label} className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-sm flex items-center justify-center flex-shrink-0" style={{ border: "1px solid rgba(75,115,212,0.3)", background: "rgba(8,42,123,0.12)" }}>
-                    <Icon className="h-4 w-4" style={{ color: "#4B73D4" }} />
+                  <div className="w-10 h-10 rounded-sm flex items-center justify-center flex-shrink-0" style={{ border: "1px solid rgba(194,164,109,0.3)", background: "rgba(194,164,109,0.12)" }}>
+                    <Icon className="h-4 w-4" style={{ color: "var(--primary)" }} />
                   </div>
                   <span className="text-sm" style={{ color: "rgba(237,237,237,0.62)" }}>{label}</span>
                 </div>
@@ -69,8 +69,8 @@ export function ContactSection() {
             {submitted ? (
               <div className="h-full flex items-center justify-center">
                 <div className="text-center">
-                  <div className="w-14 h-14 rounded-sm flex items-center justify-center mx-auto mb-8" style={{ border: "1px solid rgba(75,115,212,0.5)", background: "rgba(8,42,123,0.15)" }}>
-                    <ArrowRight className="h-6 w-6" style={{ color: "#4B73D4" }} />
+                  <div className="w-14 h-14 rounded-sm flex items-center justify-center mx-auto mb-8" style={{ border: "1px solid rgba(194,164,109,0.5)", background: "rgba(194,164,109,0.15)" }}>
+                    <ArrowRight className="h-6 w-6" style={{ color: "var(--primary)" }} />
                   </div>
                   <h3 className="text-2xl font-black mb-3" style={{ color: "#EDEDED" }}>Message Received</h3>
                   <p className="text-sm leading-relaxed max-w-xs" style={{ color: "rgba(237,237,237,0.52)" }}>
@@ -92,7 +92,7 @@ export function ContactSection() {
                     onChange={(e) => update(key as keyof typeof form, e.target.value)}
                     className="w-full px-5 py-4 rounded-sm text-sm focus:outline-none transition-colors placeholder:text-white/25"
                     style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.09)", color: "#EDEDED" }}
-                    onFocus={(e) => (e.currentTarget.style.borderColor = "#4B73D4")}
+                    onFocus={(e) => (e.currentTarget.style.borderColor = "var(--primary)")}
                     onBlur={(e)  => (e.currentTarget.style.borderColor = "rgba(255,255,255,0.09)")}
                   />
                 ))}
@@ -104,14 +104,14 @@ export function ContactSection() {
                   rows={6}
                   className="w-full px-5 py-4 rounded-sm text-sm focus:outline-none resize-none transition-colors placeholder:text-white/25"
                   style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.09)", color: "#EDEDED" }}
-                  onFocus={(e) => (e.currentTarget.style.borderColor = "#4B73D4")}
+                  onFocus={(e) => (e.currentTarget.style.borderColor = "var(--primary)")}
                   onBlur={(e)  => (e.currentTarget.style.borderColor = "rgba(255,255,255,0.09)")}
                 />
 
                 <button
                   type="submit"
                   className="group flex items-center gap-3 px-8 py-4 text-[10px] font-black uppercase tracking-[0.18em] text-white rounded-sm hover:opacity-90 transition-all duration-300"
-                  style={{ background: "#082A7B" }}
+                  style={{ background: "var(--primary)" }}
                 >
                   Submit Brief
                   <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform duration-200" />

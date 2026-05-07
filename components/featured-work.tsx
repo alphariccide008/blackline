@@ -27,14 +27,14 @@ export function FeaturedWork() {
         >
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-8 h-px" style={{ background: "#082A7B" }} />
-              <span className="text-[9px] font-black uppercase tracking-[0.38em]" style={{ color: "#4B73D4" }}>Featured Work</span>
+              <div className="w-8 h-px" style={{ background: "var(--primary)" }} />
+              <span className="text-[9px] font-black uppercase tracking-[0.38em]" style={{ color: "var(--primary)" }}>Featured Work</span>
             </div>
             <h2 className="text-[clamp(2.4rem,5vw,4rem)] font-black tracking-tight leading-none" style={{ color: "#EDEDED" }}>
               Projects That<br /><span style={{ color: "rgba(237,237,237,0.38)" }}>Moved Markets</span>
             </h2>
           </div>
-          <Link href="/projects" className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest transition-colors hover:opacity-80 self-end" style={{ color: "#4B73D4" }}>
+          <Link href="/projects" className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest transition-colors hover:opacity-80 self-end" style={{ color: "var(--primary)" }}>
             View All Work <ArrowUpRight className="h-4 w-4" />
           </Link>
         </motion.div>
@@ -52,17 +52,17 @@ export function FeaturedWork() {
           >
             <img src={projects[0].image} alt={projects[0].title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
             <div className="absolute inset-0 transition-opacity duration-300" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.2) 60%, transparent 100%)" }} />
-            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ background: "rgba(8,42,123,0.15)" }} />
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ background: "rgba(194,164,109,0.15)" }} />
             <div className="absolute bottom-0 left-0 right-0 p-6">
               <div className="flex items-center gap-2 mb-2">
                 {projects[0].tags.map((t) => (
-                  <span key={t} className="text-[9px] font-black uppercase tracking-widest px-2 py-0.5 rounded-sm" style={{ background: "rgba(8,42,123,0.85)", color: "rgba(255,255,255,0.9)" }}>{t}</span>
+                  <span key={t} className="text-[9px] font-black uppercase tracking-widest px-2 py-0.5 rounded-sm" style={{ background: "rgba(194,164,109,0.95)", color: "rgba(255,255,255,0.92)" }}>{t}</span>
                 ))}
               </div>
               <p className="text-[9px] uppercase tracking-[0.25em] mb-2" style={{ color: "rgba(255,255,255,0.5)" }}>{projects[0].category}</p>
               <h3 className="text-xl font-black text-white">{projects[0].title}</h3>
             </div>
-            <div className="absolute top-4 right-4 w-9 h-9 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 -translate-y-2 group-hover:translate-y-0" style={{ background: "#082A7B" }}>
+            <div className="absolute top-4 right-4 w-9 h-9 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 -translate-y-2 group-hover:translate-y-0" style={{ background: "var(--primary)" }}>
               <ArrowUpRight className="h-4 w-4 text-white" />
             </div>
           </motion.div>
@@ -81,7 +81,7 @@ export function FeaturedWork() {
               >
                 <img src={p.image} alt={p.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.1) 60%, transparent 100%)" }} />
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ background: "rgba(8,42,123,0.15)" }} />
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ background: "rgba(194,164,109,0.15)" }} />
                 <div className="absolute bottom-0 left-0 right-0 p-5">
                   <p className="text-[8px] uppercase tracking-[0.25em] mb-1" style={{ color: "rgba(255,255,255,0.5)" }}>{p.category}</p>
                   <h3 className="text-base font-black text-white">{p.title}</h3>
@@ -103,17 +103,17 @@ export function FeaturedWork() {
             >
               <img src={p.image} alt={p.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
               <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.1) 60%, transparent 100%)" }} />
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ background: "rgba(8,42,123,0.15)" }} />
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ background: "rgba(194,164,109,0.15)" }} />
               <div className="absolute bottom-0 left-0 right-0 p-5">
                 <div className="flex items-center gap-2 mb-2">
                   {p.tags.map((t) => (
-                    <span key={t} className="text-[9px] font-black uppercase tracking-widest px-2 py-0.5 rounded-sm" style={{ background: "rgba(8,42,123,0.85)", color: "rgba(255,255,255,0.9)" }}>{t}</span>
+                    <span key={t} className="text-[9px] font-black uppercase tracking-widest px-2 py-0.5 rounded-sm" style={{ background: "rgba(194,164,109,0.95)", color: "rgba(255,255,255,0.92)" }}>{t}</span>
                   ))}
                 </div>
                 <p className="text-[8px] uppercase tracking-[0.25em] mb-1" style={{ color: "rgba(255,255,255,0.5)" }}>{p.category}</p>
                 <h3 className="text-lg font-black text-white">{p.title}</h3>
               </div>
-              <div className="absolute top-4 right-4 w-9 h-9 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 -translate-y-2 group-hover:translate-y-0" style={{ background: "#082A7B" }}>
+              <div className="absolute top-4 right-4 w-9 h-9 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 -translate-y-2 group-hover:translate-y-0" style={{ background: "var(--primary)" }}>
                 <ArrowUpRight className="h-4 w-4 text-white" />
               </div>
             </motion.div>

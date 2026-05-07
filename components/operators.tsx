@@ -93,7 +93,7 @@ export function Operators() {
         style={{
           width: 800,
           height: 400,
-          background: "radial-gradient(ellipse at bottom, rgba(8,42,123,0.18), transparent 70%)",
+          background: "radial-gradient(ellipse at bottom, rgba(194,164,109,0.18), transparent 70%)",
           filter: "blur(40px)",
         }}
       />
@@ -105,7 +105,7 @@ export function Operators() {
           fontSize: "clamp(3rem,10vw,7.5rem)",
           letterSpacing: "-0.02em",
           fontFamily: '"Arial Black", "Arial Bold", Arial, sans-serif',
-          background: "linear-gradient(to bottom, rgba(8,42,123,0.2) 30%, rgba(255,255,255,0) 76%)",
+          background: "linear-gradient(to bottom, rgba(194,164,109,0.18) 30%, rgba(255,255,255,0) 76%)",
           WebkitBackgroundClip: "text",
           backgroundClip: "text",
           color: "transparent",
@@ -119,17 +119,17 @@ export function Operators() {
         {/* Header */}
         <div className="text-center mb-20">
           <div className="flex items-center justify-center gap-3 mb-6">
-            <div className="w-8 h-px" style={{ background: "#082A7B" }} />
-            <span className="text-[9px] font-black uppercase tracking-[0.38em]" style={{ color: "#082A7B" }}>
+            <div className="w-8 h-px" style={{ background: "var(--primary)" }} />
+            <span className="text-[9px] font-black uppercase tracking-[0.38em]" style={{ color: "var(--primary)" }}>
               Selected Talent
             </span>
-            <div className="w-8 h-px" style={{ background: "#082A7B" }} />
+            <div className="w-8 h-px" style={{ background: "var(--primary)" }} />
           </div>
           <h2 className="text-[clamp(2.4rem,5vw,4rem)] font-black tracking-tight text-white mb-4">
             The Operators
           </h2>
           <p className="text-white/28 text-sm max-w-sm mx-auto leading-relaxed">
-            A curated group of specialists behind Blackline systems.
+            A curated group of specialists behind LOECHSAR systems.
           </p>
         </div>
 
@@ -142,11 +142,11 @@ export function Operators() {
             aria-label="Previous"
             className="absolute left-0 top-1/2 -translate-y-1/2 z-30 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200"
             style={{
-              background: "rgba(8,42,123,0.45)",
-              border: "1px solid rgba(8,42,123,0.6)",
+              background: "rgba(194,164,109,0.28)",
+              border: "1px solid rgba(194,164,109,0.36)",
             }}
-            onMouseEnter={(e) => (e.currentTarget.style.background = "#082A7B")}
-            onMouseLeave={(e) => (e.currentTarget.style.background = "rgba(8,42,123,0.45)")}
+            onMouseEnter={(e) => (e.currentTarget.style.background = "var(--primary)")}
+            onMouseLeave={(e) => (e.currentTarget.style.background = "rgba(194,164,109,0.28)")}
           >
             <ChevronLeft className="h-5 w-5 text-white" />
           </button>
@@ -165,7 +165,7 @@ export function Operators() {
                     style={{
                       background: "linear-gradient(180deg, #0a0a14, #050508)",
                       border: isCenter
-                        ? "1px solid rgba(8,42,123,0.45)"
+                        ? "1px solid rgba(194,164,109,0.28)"
                         : "1px solid rgba(255,255,255,0.04)",
                     }}
                   >
@@ -179,7 +179,7 @@ export function Operators() {
                           className="absolute inset-0"
                           style={{
                             background:
-                              "linear-gradient(to top, rgba(8,42,123,0.75) 0%, transparent 55%)",
+                              "linear-gradient(to top, rgba(194,164,109,0.75) 0%, transparent 55%)",
                           }}
                         />
                         <div className="absolute bottom-5 left-5 right-5">
@@ -192,8 +192,8 @@ export function Operators() {
                           </a>
                         </div>
                         {/* Blue corner accent */}
-                        <div className="absolute top-0 left-0 w-8 h-8 border-l-2 border-t-2" style={{ borderColor: "#082A7B" }} />
-                        <div className="absolute top-0 right-0 w-8 h-8 border-r-2 border-t-2" style={{ borderColor: "#082A7B" }} />
+                        <div className="absolute top-0 left-0 w-8 h-8 border-l-2 border-t-2" style={{ borderColor: "var(--primary)" }} />
+                        <div className="absolute top-0 right-0 w-8 h-8 border-r-2 border-t-2" style={{ borderColor: "var(--primary)" }} />
                       </>
                     )}
                   </div>
@@ -208,11 +208,11 @@ export function Operators() {
             aria-label="Next"
             className="absolute right-0 top-1/2 -translate-y-1/2 z-30 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200"
             style={{
-              background: "rgba(8,42,123,0.45)",
-              border: "1px solid rgba(8,42,123,0.6)",
+              background: "rgba(194,164,109,0.28)",
+              border: "1px solid rgba(194,164,109,0.36)",
             }}
-            onMouseEnter={(e) => (e.currentTarget.style.background = "#082A7B")}
-            onMouseLeave={(e) => (e.currentTarget.style.background = "rgba(8,42,123,0.45)")}
+            onMouseEnter={(e) => (e.currentTarget.style.background = "var(--primary)")}
+            onMouseLeave={(e) => (e.currentTarget.style.background = "rgba(194,164,109,0.28)")}
           >
             <ChevronRight className="h-5 w-5 text-white" />
           </button>
@@ -225,11 +225,11 @@ export function Operators() {
             style={{ opacity: nameVisible ? 1 : 0, transform: nameVisible ? "translateY(0)" : "translateY(8px)" }}
           >
             <div className="flex items-center justify-center gap-6 mb-1">
-              <div className="w-20 h-px" style={{ background: "#082A7B" }} />
+              <div className="w-20 h-px" style={{ background: "var(--primary)" }} />
               <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
                 {operators[cur].name}
               </h3>
-              <div className="w-20 h-px" style={{ background: "#082A7B" }} />
+              <div className="w-20 h-px" style={{ background: "var(--primary)" }} />
             </div>
             <p className="text-[10px] uppercase tracking-[0.25em] text-white/35 mt-2">
               {operators[cur].discipline}
@@ -248,7 +248,7 @@ export function Operators() {
               style={{
                 width: idx === cur ? 28 : 8,
                 height: 8,
-                background: idx === cur ? "#082A7B" : "rgba(8,42,123,0.22)",
+                background: idx === cur ? "var(--primary)" : "rgba(194,164,109,0.22)",
               }}
             />
           ))}

@@ -21,14 +21,14 @@ export default function BlogPage() {
       <Header />
 
       <section className="relative pt-40 pb-20 overflow-hidden" style={{ background: "#0A0A0C" }}>
-        <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse 70% 50% at 50% 0%, rgba(8,42,123,0.14), transparent)" }} />
+        <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse 70% 50% at 50% 0%, rgba(194,164,109,0.14), transparent)" }} />
         <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
           <div className="flex items-center gap-3 mb-8">
-            <div className="w-8 h-px" style={{ background: "#082A7B" }} />
-            <span className="text-[9px] font-black uppercase tracking-[0.38em]" style={{ color: "#4B73D4" }}>Insights</span>
+            <div className="w-8 h-px" style={{ background: "var(--primary)" }} />
+              <span className="text-[9px] font-black uppercase tracking-[0.38em]" style={{ color: "var(--primary)" }}>Insights</span>
           </div>
           <h1 className="text-[clamp(3rem,8vw,7rem)] font-black tracking-tight leading-none mb-8" style={{ color: "#EDEDED" }}>
-            Ideas That<br /><span style={{ color: "#4B73D4" }}>Shape Practice.</span>
+              Ideas That<br /><span style={{ color: "var(--primary)" }}>Shape Practice.</span>
           </h1>
         </div>
       </section>
@@ -41,12 +41,12 @@ export default function BlogPage() {
             <div className="relative overflow-hidden" style={{ minHeight: 360 }}>
               <img src={featured.image} alt={featured.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
               <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 60%)" }} />
-              <span className="absolute top-5 left-5 text-[9px] font-black uppercase tracking-widest px-2.5 py-1 rounded-sm" style={{ background: "#082A7B", color: "rgba(255,255,255,0.92)" }}>
+              <span className="absolute top-5 left-5 text-[9px] font-black uppercase tracking-widest px-2.5 py-1 rounded-sm" style={{ background: "var(--primary)", color: "rgba(255,255,255,0.92)" }}>
                 Featured
               </span>
             </div>
             <div className="p-8 lg:p-12 flex flex-col justify-center">
-              <span className="text-[9px] font-black uppercase tracking-widest mb-4" style={{ color: "#4B73D4" }}>{featured.category}</span>
+              <span className="text-[9px] font-black uppercase tracking-widest mb-4" style={{ color: "var(--primary)" }}>{featured.category}</span>
               <h2 className="text-2xl md:text-3xl font-black mb-4 leading-snug" style={{ color: "#EDEDED" }}>{featured.title}</h2>
               <p className="text-sm leading-relaxed mb-8" style={{ color: "rgba(237,237,237,0.52)" }}>{featured.excerpt}</p>
               <div className="flex items-center justify-between">
@@ -54,7 +54,7 @@ export default function BlogPage() {
                   <Clock className="h-3.5 w-3.5" />
                   {featured.readTime}
                 </div>
-                <div className="flex items-center gap-1.5 text-xs font-bold" style={{ color: "#4B73D4" }}>
+                <div className="flex items-center gap-1.5 text-xs font-bold" style={{ color: "var(--primary)" }}>
                   Read Article <ArrowUpRight className="h-4 w-4" />
                 </div>
               </div>
@@ -68,7 +68,7 @@ export default function BlogPage() {
                 <div className="h-48 overflow-hidden relative">
                   <img src={post.image} alt={post.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                   <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 50%)" }} />
-                  <span className="absolute top-3 left-3 text-[9px] font-black uppercase tracking-widest px-2.5 py-1 rounded-sm" style={{ background: "#082A7B", color: "rgba(255,255,255,0.92)" }}>
+                  <span className="absolute top-3 left-3 text-[9px] font-black uppercase tracking-widest px-2.5 py-1 rounded-sm" style={{ background: "var(--primary)", color: "rgba(255,255,255,0.92)" }}>
                     {post.category}
                   </span>
                 </div>

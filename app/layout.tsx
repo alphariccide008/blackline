@@ -7,17 +7,17 @@ import { CartProvider } from "@/lib/cart-context"
 import { BriefCartBar } from "@/components/brief-cart-bar"
 
 export const metadata: Metadata = {
-  title: "BLACKLINE — Precision Over Noise",
+  title: "LO ECHSAR  Structured Brand System",
   description:
-    "A full-spectrum brand and growth company. We build, position, and activate brands across every environment in which they exist.",
+    "Lo Echsar is a structured brand system. We define, design, and deploy brands across environments with precision.",
   icons: {
-    icon: "/icon.svg",
-    shortcut: "/icon.svg",
-    apple: "/icon.svg",
+    icon: "/logo.PNG",
+    shortcut: "/logo.PNG",
+    apple: "/logo.PNG",
   },
   openGraph: {
-    title: "BLACKLINE — Precision Over Noise",
-    description: "Brand strategy, identity systems, outdoor advertising, and full-spectrum growth activation.",
+    title: "LO ECHSAR  Structured Brand System",
+    description: "Lo Echsar is a structured brand system. We define, design, and deploy brands across environments with precision.",
     type: "website",
   },
 }

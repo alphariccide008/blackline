@@ -9,8 +9,8 @@ export default function SettingsPage() {
   const [ready, setReady] = useState(false)
   const [saved, setSaved] = useState(false)
   const [form, setForm] = useState({
-    displayName: "BLACKLINE Admin",
-    email: "admin@blackline.com",
+    displayName: "LO ECHSAR Admin",
+    email: "admin@loechsar.com",
     currentPw: "",
     newPw: "",
     confirmPw: "",
@@ -45,7 +45,7 @@ export default function SettingsPage() {
         <div className="admin-card p-6">
           <h2 className="text-sm font-black text-white mb-6">Profile</h2>
           <div className="flex items-center gap-4 mb-8">
-            <div className="w-16 h-16 rounded-2xl flex items-center justify-center text-2xl font-black text-white" style={{ background: "#082A7B" }}>
+            <div className="w-16 h-16 rounded-2xl flex items-center justify-center text-2xl font-black text-white" style={{ background: "#C2A46D" }}>
               A
             </div>
             <div>
@@ -76,7 +76,7 @@ export default function SettingsPage() {
         {/* Password */}
         <div className="admin-card p-6">
           <div className="flex items-center gap-2 mb-6">
-            <Shield className="h-4 w-4" style={{ color: "#082A7B" }} />
+            <Shield className="h-4 w-4" style={{ color: "var(--primary)" }} />
             <h2 className="text-sm font-black text-white">Security</h2>
           </div>
           <div className="space-y-4">
@@ -118,7 +118,7 @@ export default function SettingsPage() {
                   type="button"
                   onClick={() => setForm({ ...form, [key]: !form[key as keyof typeof form] })}
                   className="relative w-11 h-6 rounded-full transition-all duration-300 flex-shrink-0"
-                  style={{ background: form[key as keyof typeof form] ? "#082A7B" : "rgba(255,255,255,0.1)" }}
+                  style={{ background: form[key as keyof typeof form] ? "var(--primary)" : "rgba(255,255,255,0.1)" }}
                 >
                   <span
                     className="absolute top-1 w-4 h-4 rounded-full bg-white shadow transition-all duration-300"
@@ -133,7 +133,7 @@ export default function SettingsPage() {
         <button
           type="submit"
           className="flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-black text-white transition hover:opacity-85"
-          style={{ background: "#082A7B" }}
+          style={{ background: "var(--primary)" }}
         >
           <Save className="h-4 w-4" />
           {saved ? "Saved!" : "Save Changes"}

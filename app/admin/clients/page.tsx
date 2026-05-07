@@ -18,7 +18,7 @@ const CLIENTS = [
 ]
 
 const tierColor: Record<string, string> = {
-  enterprise: "bg-[#082A7B]/20 text-[#4B73D4]",
+  enterprise: "bg-[rgba(194,164,109,0.12)] text-[#C2A46D]",
   growth:     "bg-green-500/15 text-green-400",
   starter:    "bg-white/8 text-white/40",
 }
@@ -47,7 +47,7 @@ export default function ClientsPage() {
           <h1 className="text-2xl font-black text-white">Clients</h1>
           <p className="text-white/35 text-sm mt-1">{CLIENTS.length} active client relationships</p>
         </div>
-        <button className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-black text-white transition hover:opacity-85" style={{ background: "#082A7B" }}>
+        <button className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-black text-white transition hover:opacity-85" style={{ background: "var(--primary)" }}>
           <Plus className="h-4 w-4" /> Add Client
         </button>
       </div>
@@ -55,12 +55,12 @@ export default function ClientsPage() {
       {/* Summary */}
       <div className="grid grid-cols-3 gap-3 mb-8">
         {[
-          { label: "Enterprise", count: CLIENTS.filter(c => c.tier === "enterprise").length, color: "text-[#4B73D4]" },
-          { label: "Growth",     count: CLIENTS.filter(c => c.tier === "growth").length,     color: "text-green-400" },
-          { label: "Starter",    count: CLIENTS.filter(c => c.tier === "starter").length,    color: "text-white/40" },
+          { label: "Enterprise", count: CLIENTS.filter(c => c.tier === "enterprise").length },
+          { label: "Growth",     count: CLIENTS.filter(c => c.tier === "growth").length },
+          { label: "Starter",    count: CLIENTS.filter(c => c.tier === "starter").length },
         ].map((s) => (
           <div key={s.label} className="admin-card p-5 text-center">
-            <div className={`text-3xl font-black mb-1 ${s.color}`}>{s.count}</div>
+            <div className="text-3xl font-black mb-1" style={{ color: s.label === "Enterprise" ? "var(--primary)" : s.label === "Growth" ? undefined : undefined }}>{s.count}</div>
             <div className="text-[10px] uppercase tracking-widest text-white/25">{s.label}</div>
           </div>
         ))}
@@ -85,8 +85,8 @@ export default function ClientsPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 p-4">
           {filtered.map((c) => (
             <div key={c.id} className="flex items-start gap-3 p-4 rounded-xl border border-white/5 hover:border-white/10 hover:bg-white/3 transition-all cursor-pointer">
-              <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: "rgba(8,42,123,0.2)" }}>
-                <Building2 className="h-4 w-4" style={{ color: "#082A7B" }} />
+              <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: "rgba(194,164,109,0.12)" }}>
+                <Building2 className="h-4 w-4" style={{ color: "var(--primary)" }} />
               </div>
               <div className="flex-1 min-w-0">
                 <div className="flex items-start justify-between gap-2">

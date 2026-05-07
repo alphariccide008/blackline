@@ -10,11 +10,11 @@ export function Philosophy() {
 
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden" aria-hidden>
         <span className="font-black whitespace-nowrap" style={{ fontSize: "clamp(6rem,18vw,18rem)", opacity: 0.04, letterSpacing: "-0.05em", color: "#EDEDED" }}>
-          BLACKLINE
+          LOECHSAR
         </span>
       </div>
 
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none" style={{ width: 500, height: 500, borderRadius: "50%", background: "radial-gradient(circle, rgba(8,42,123,0.14), transparent 70%)", filter: "blur(80px)" }} />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none" style={{ width: 500, height: 500, borderRadius: "50%", background: "radial-gradient(circle, rgba(194,164,109,0.14), transparent 70%)", filter: "blur(80px)" }} />
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
 
@@ -25,9 +25,9 @@ export function Philosophy() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, ease }}
         >
-          <div className="w-8 h-px" style={{ background: "#082A7B" }} />
-          <span className="text-[9px] font-black uppercase tracking-[0.38em]" style={{ color: "#4B73D4" }}>Philosophy</span>
-          <div className="w-8 h-px" style={{ background: "#082A7B" }} />
+          <div className="w-8 h-px" style={{ background: "var(--primary)" }} />
+          <span className="text-[9px] font-black uppercase tracking-[0.38em]" style={{ color: "var(--primary)" }}>Philosophy</span>
+          <div className="w-8 h-px" style={{ background: "var(--primary)" }} />
         </motion.div>
 
         <motion.blockquote
@@ -43,7 +43,7 @@ export function Philosophy() {
 
         <motion.blockquote
           className="font-black leading-[1.12] tracking-tight mb-16"
-          style={{ fontSize: "clamp(1.8rem,5vw,3.5rem)", color: "#4B73D4" }}
+          style={{ fontSize: "clamp(1.8rem,5vw,3.5rem)", color: "var(--primary)" }}
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -102,10 +102,10 @@ export function Philosophy() {
                 className="flex flex-col items-center justify-center py-8"
                 style={{
                   borderRight: idx < 2 ? "1px solid rgba(255,255,255,0.08)" : "none",
-                  background: s.accent ? "rgba(8,42,123,0.12)" : "transparent",
+                  background: s.accent ? "rgba(194,164,109,0.12)" : "transparent",
                 }}
               >
-                <span className="text-3xl font-black mb-1.5" style={{ color: s.accent ? "#4B73D4" : "#EDEDED" }}>{s.value}</span>
+                <span className="text-3xl font-black mb-1.5" style={{ color: s.accent ? "var(--primary)" : "#EDEDED" }}>{s.value}</span>
                 <span className="text-[8px] uppercase tracking-widest" style={{ color: "rgba(237,237,237,0.35)" }}>{s.label}</span>
               </div>
             ))}

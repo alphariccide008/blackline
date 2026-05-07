@@ -30,18 +30,18 @@ export default function AdminLogin() {
   return (
     <div className="min-h-screen flex items-center justify-center px-4" style={{ background: "#030612" }}>
       {/* Glow */}
-      <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse 60% 50% at 50% 30%, rgba(8,42,123,0.18), transparent)" }} />
+      <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse 60% 50% at 50% 30%, rgba(194,164,109,0.18), transparent)" }} />
 
       <div className="relative z-10 w-full max-w-sm">
         {/* Logo */}
         <div className="text-center mb-10">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <svg width="44" height="44" viewBox="0 0 72 72" fill="none">
-              <rect x="2" y="2" width="68" height="68" rx="14" stroke="#082A7B" strokeWidth="2" />
-              <text x="36" y="46" textAnchor="middle" fill="#082A7B" fontSize="22" fontWeight="900" fontFamily="Poppins, sans-serif" letterSpacing="-1">BL</text>
+              <svg width="44" height="44" viewBox="0 0 72 72" fill="none">
+              <rect x="2" y="2" width="68" height="68" rx="14" stroke="var(--primary)" strokeWidth="2" />
+              <text x="36" y="46" textAnchor="middle" fill="var(--primary)" fontSize="22" fontWeight="900" fontFamily="Poppins, sans-serif" letterSpacing="-1">LO</text>
             </svg>
             <div>
-              <p className="text-lg font-black text-white">BLACKLINE</p>
+              <p className="text-lg font-black text-white">LOECHSAR</p>
               <p className="text-[9px] uppercase tracking-widest text-white/30">Admin Portal</p>
             </div>
           </div>
@@ -59,7 +59,7 @@ export default function AdminLogin() {
                 onChange={(e) => setUsername(e.target.value)}
                 placeholder="admin"
                 required
-                className="w-full px-4 py-3 rounded-xl text-sm text-white placeholder-white/20 outline-none focus:ring-1 ring-[#082A7B] transition"
+                className="w-full px-4 py-3 rounded-xl text-sm text-white placeholder-white/20 outline-none focus:ring-1 transition"
                 style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.08)" }}
               />
             </div>
@@ -72,7 +72,7 @@ export default function AdminLogin() {
                   type={showPw ? "text" : "password"}
                   placeholder="••••••••"
                   required
-                  className="w-full px-4 py-3 pr-11 rounded-xl text-sm text-white placeholder-white/20 outline-none focus:ring-1 ring-[#082A7B] transition"
+                  className="w-full px-4 py-3 pr-11 rounded-xl text-sm text-white placeholder-white/20 outline-none focus:ring-1 transition"
                   style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.08)" }}
                 />
                 <button
@@ -89,11 +89,11 @@ export default function AdminLogin() {
               <p className="text-xs text-red-400 bg-red-500/10 px-3 py-2 rounded-lg border border-red-500/20">{error}</p>
             )}
 
-            <button
+              <button
               type="submit"
               disabled={loading}
               className="w-full py-3.5 rounded-xl text-sm font-black text-white transition-all duration-200 hover:opacity-90 disabled:opacity-60 flex items-center justify-center gap-2"
-              style={{ background: "#082A7B" }}
+                style={{ background: "var(--primary)" }}
             >
               {loading
                 ? <><span className="loader-ring w-4 h-4 inline-block" />Signing in...</>

@@ -43,9 +43,9 @@ export function FeaturesSection() {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
           <div className="flex items-center justify-center gap-3 mb-6">
-            <div className="w-8 h-px" style={{ background: "#082A7B" }} />
-            <span className="text-[9px] font-black uppercase tracking-[0.38em]" style={{ color: "#4B73D4" }}>Why BLACKLINE</span>
-            <div className="w-8 h-px" style={{ background: "#082A7B" }} />
+            <div className="w-8 h-px" style={{ background: "var(--primary)" }} />
+            <span className="text-[9px] font-black uppercase tracking-[0.38em]" style={{ color: "var(--primary)" }}>Why LOECHSAR</span>
+            <div className="w-8 h-px" style={{ background: "var(--primary)" }} />
           </div>
           <h2 className="text-[clamp(2.4rem,5vw,4rem)] font-black tracking-tight leading-none mb-4" style={{ color: "#EDEDED" }}>
             The Difference<br /><span style={{ color: "rgba(237,237,237,0.38)" }}>Is The System</span>
@@ -68,15 +68,15 @@ export function FeaturesSection() {
                 viewport={{ once: true, amount: 0.1 }}
                 transition={v.transition}
               >
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" style={{ background: "linear-gradient(135deg, rgba(8,42,123,0.12), transparent 60%)" }} />
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" style={{ background: "linear-gradient(135deg, rgba(194,164,109,0.12), transparent 60%)" }} />
 
                 <motion.div
                   className="relative z-10 w-12 h-12 rounded-xl flex items-center justify-center mb-6"
-                  style={{ background: "rgba(8,42,123,0.18)", border: "1px solid rgba(75,115,212,0.25)" }}
+                  style={{ background: "rgba(194,164,109,0.12)", border: "1px solid rgba(194,164,109,0.22)" }}
                   whileHover={{ scale: 1.15, rotate: 3 }}
                   transition={{ type: "spring", stiffness: 400, damping: 16 }}
                 >
-                  <Icon className="h-5 w-5" style={{ color: "#4B73D4" }} />
+                  <Icon className="h-5 w-5" style={{ color: "var(--primary)" }} />
                 </motion.div>
 
                 <div className="relative z-10">

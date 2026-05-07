@@ -22,7 +22,7 @@ function Field({
   return (
     <div>
       <label className="block text-xs font-bold mb-2" style={{ color: "rgba(237,237,237,0.45)" }}>
-        {label} {required && <span style={{ color: "#4B73D4" }}>*</span>}
+        {label} {required && <span style={{ color: "var(--primary)" }}>*</span>}
       </label>
       <div className="relative">
         <Icon className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4" style={{ color: "rgba(237,237,237,0.25)" }} />
@@ -33,7 +33,7 @@ function Field({
             background: "rgba(255,255,255,0.04)",
             border: "1px solid rgba(255,255,255,0.1)",
           }}
-          onFocus={(e) => { e.currentTarget.style.borderColor = "rgba(75,115,212,0.6)"; props.onFocus?.(e) }}
+          onFocus={(e) => { e.currentTarget.style.borderColor = "rgba(194,164,109,0.6)"; props.onFocus?.(e) }}
           onBlur={(e) => { e.currentTarget.style.borderColor = "rgba(255,255,255,0.1)"; props.onBlur?.(e) }}
         />
       </div>
@@ -113,17 +113,17 @@ export default function BriefPage() {
                 transition={{ type: "spring", stiffness: 240, damping: 22 }}
                 className="text-center py-20"
               >
-                <div className="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6" style={{ background: "rgba(8,42,123,0.2)", border: "2px solid rgba(75,115,212,0.4)" }}>
-                  <Check className="h-9 w-9" style={{ color: "#4B73D4" }} />
+                <div className="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6" style={{ background: "rgba(194,164,109,0.18)", border: "2px solid rgba(194,164,109,0.36)" }}>
+                  <Check className="h-9 w-9" style={{ color: "var(--primary)" }} />
                 </div>
                 <h2 className="text-3xl font-black text-white mb-3">Brief Sent!</h2>
                 <p className="text-white/45 max-w-md mx-auto text-sm leading-relaxed mb-8">
-                  We&apos;ve received your brief and sent a confirmation to your email. A BLACKLINE strategist will reach out within 24 hours.
+                  We&apos;ve received your brief and sent a confirmation to your email. A LOECHSAR strategist will reach out within 24 hours.
                 </p>
                 <Link
                   href="/billboards"
                   className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-sm font-black text-white"
-                  style={{ background: "#082A7B" }}
+                  style={{ background: "var(--primary)" }}
                 >
                   Browse More Billboards
                 </Link>
@@ -144,7 +144,7 @@ export default function BriefPage() {
                     <div className="rounded-2xl py-12 text-center" style={{ background: "#17171C", border: "1px solid rgba(255,255,255,0.07)" }}>
                       <MapPin className="h-8 w-8 mx-auto mb-3 text-white/15" />
                       <p className="text-sm text-white/25">No billboards selected</p>
-                      <Link href="/billboards" className="mt-4 inline-block text-xs font-bold" style={{ color: "#4B73D4" }}>
+                      <Link href="/billboards" className="mt-4 inline-block text-xs font-bold" style={{ color: "var(--primary)" }}>
                         Browse billboards →
                       </Link>
                     </div>
@@ -164,12 +164,12 @@ export default function BriefPage() {
                           <div className="flex-1 min-w-0">
                             <p className="text-xs font-black text-white truncate">{b.title}</p>
                             <div className="flex items-center gap-1 mt-0.5">
-                              <MapPin className="h-3 w-3 flex-shrink-0" style={{ color: "#4B73D4" }} />
+                              <MapPin className="h-3 w-3 flex-shrink-0" style={{ color: "var(--primary)" }} />
                               <p className="text-[10px] text-white/35 truncate">{b.location}</p>
                             </div>
                             <div className="flex items-center gap-1 mt-1.5">
-                              <Zap className="h-2.5 w-2.5" style={{ color: "#4B73D4" }} />
-                              <span className="text-[10px] font-semibold" style={{ color: "#4B73D4" }}>{b.impressions}</span>
+                              <Zap className="h-2.5 w-2.5" style={{ color: "var(--primary)" }} />
+                              <span className="text-[10px] font-semibold" style={{ color: "var(--primary)" }}>{b.impressions}</span>
                             </div>
                           </div>
                           <button
@@ -181,7 +181,7 @@ export default function BriefPage() {
                         </motion.div>
                       ))}
 
-                      <Link href="/billboards" className="block text-center text-[11px] font-bold py-3 rounded-xl transition-colors hover:bg-white/5" style={{ color: "#4B73D4", border: "1px dashed rgba(75,115,212,0.3)" }}>
+                      <Link href="/billboards" className="block text-center text-[11px] font-bold py-3 rounded-xl transition-colors hover:bg-white/5" style={{ color: "var(--primary)", border: "1px dashed rgba(194,164,109,0.3)" }}>
                         + Add more billboards
                       </Link>
                     </div>
@@ -219,7 +219,7 @@ export default function BriefPage() {
                           onChange={(e) => setBrief(e.target.value)}
                           className="w-full rounded-xl pl-10 pr-4 py-3 text-sm text-white outline-none resize-none transition-colors"
                           style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.1)" }}
-                          onFocus={(e) => { e.currentTarget.style.borderColor = "rgba(75,115,212,0.6)" }}
+                          onFocus={(e) => { e.currentTarget.style.borderColor = "rgba(194,164,109,0.6)" }}
                           onBlur={(e) => { e.currentTarget.style.borderColor = "rgba(255,255,255,0.1)" }}
                         />
                       </div>
@@ -230,9 +230,9 @@ export default function BriefPage() {
                     <p className="text-xs text-red-400 font-semibold">{error}</p>
                   )}
 
-                  <div className="rounded-2xl p-4" style={{ background: "rgba(8,42,123,0.08)", border: "1px solid rgba(75,115,212,0.15)" }}>
+                  <div className="rounded-2xl p-4" style={{ background: "rgba(194,164,109,0.06)", border: "1px solid rgba(194,164,109,0.15)" }}>
                     <p className="text-[11px] text-white/35 leading-relaxed">
-                      By submitting this brief, you agree to be contacted by BLACKLINE regarding your outdoor advertising campaign. A confirmation copy will be sent to your email address.
+                      By submitting this brief, you agree to be contacted by LOECHSAR regarding your outdoor advertising campaign. A confirmation copy will be sent to your email address.
                     </p>
                   </div>
 
@@ -240,7 +240,7 @@ export default function BriefPage() {
                     type="submit"
                     disabled={!canSubmit || loading}
                     className="w-full py-4 rounded-xl text-sm font-black text-white flex items-center justify-center gap-2.5 transition-all duration-200 hover:opacity-90 disabled:opacity-40 disabled:cursor-not-allowed"
-                    style={{ background: "#082A7B" }}
+                    style={{ background: "var(--primary)" }}
                   >
                     {loading ? (
                       <><div className="w-4 h-4 rounded-full border-2 border-white/30 border-t-white animate-spin" /> Sending Brief...</>

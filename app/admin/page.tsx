@@ -67,10 +67,10 @@ export default function AdminDashboard() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
         {kpis.map(({ label, value, icon: Icon, delta }) => (
           <div key={label} className="admin-card p-6 relative overflow-hidden group">
-            <div className="absolute top-0 right-0 w-20 h-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" style={{ background: "radial-gradient(circle at top right, rgba(8,42,123,0.15), transparent)" }} />
+            <div className="absolute top-0 right-0 w-20 h-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" style={{ background: "radial-gradient(circle at top right, rgba(194,164,109,0.15), transparent)" }} />
             <div className="flex items-start justify-between mb-4">
-              <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "rgba(8,42,123,0.2)" }}>
-                <Icon className="h-4 w-4" style={{ color: "#082A7B" }} />
+              <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "rgba(194,164,109,0.2)" }}>
+                <Icon className="h-4 w-4" style={{ color: "var(--primary)" }} />
               </div>
             </div>
             <div className="text-3xl font-black text-white mb-1">{value}</div>
@@ -84,7 +84,7 @@ export default function AdminDashboard() {
       <div className="admin-card overflow-hidden mb-6">
         <div className="flex items-center justify-between p-6 border-b border-white/5">
           <h2 className="text-sm font-black text-white">Active Campaigns</h2>
-          <a href="/admin/campaigns" className="text-xs font-bold text-[#082A7B] flex items-center gap-1 hover:opacity-80 transition">
+          <a href="/admin/campaigns" className="text-xs font-bold flex items-center gap-1 hover:opacity-80 transition" style={{ color: "var(--primary)" }}>
             View all <ArrowUpRight className="h-3.5 w-3.5" />
           </a>
         </div>
@@ -124,7 +124,7 @@ export default function AdminDashboard() {
               <span className="text-[10px] font-black bg-green-500 text-white rounded-full px-2 py-0.5">{unread} new</span>
             )}
           </div>
-          <a href="/admin/enquiries" className="text-xs font-bold text-[#082A7B] flex items-center gap-1 hover:opacity-80 transition">
+          <a href="/admin/enquiries" className="text-xs font-bold flex items-center gap-1 hover:opacity-80 transition" style={{ color: "var(--primary)" }}>
             Manage <ArrowUpRight className="h-3.5 w-3.5" />
           </a>
         </div>
@@ -139,10 +139,10 @@ export default function AdminDashboard() {
                 href="/admin/enquiries"
                 className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/4 transition-colors"
               >
-                <div className="relative flex-shrink-0">
-                  <div className="w-9 h-9 rounded-full flex items-center justify-center text-xs font-black text-white" style={{ background: "rgba(8,42,123,0.4)" }}>
-                    {s.name.charAt(0).toUpperCase()}
-                  </div>
+                    <div className="relative flex-shrink-0">
+                      <div className="w-9 h-9 rounded-full flex items-center justify-center text-xs font-black text-white" style={{ background: "rgba(194,164,109,0.4)" }}>
+                        {s.name.charAt(0).toUpperCase()}
+                      </div>
                   {!s.read && <div className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-green-400 border-2 border-[#030612]" />}
                 </div>
                 <div className="flex-1 min-w-0">

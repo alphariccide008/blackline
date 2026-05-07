@@ -53,33 +53,33 @@ function TiltCard({ stage, idx, total }: { stage: (typeof stages)[0]; idx: numbe
         borderTop: "1px solid rgba(255,255,255,0.07)",
         borderRight: idx < total - 1 ? "1px solid rgba(255,255,255,0.07)" : "none",
         transition: "transform 0.35s ease, background 0.35s ease",
-        background: hovered ? "rgba(8,42,123,0.1)" : "transparent",
+        background: hovered ? "rgba(194,164,109,0.1)" : "transparent",
       }}
       onMouseMove={onMove}
       onMouseLeave={onLeave}
       onMouseEnter={() => setHovered(true)}
     >
-      <div className="absolute top-0 left-0 h-[2px] transition-all duration-500" style={{ width: hovered ? "100%" : "0%", background: "#082A7B" }} />
+      <div className="absolute top-0 left-0 h-[2px] transition-all duration-500" style={{ width: hovered ? "100%" : "0%", background: "var(--primary)" }} />
 
       <span className="text-[10px] font-black tracking-[0.3em] mb-6 block" style={{ color: "rgba(237,237,237,0.22)" }}>{stage.number}</span>
 
       <div className="flex items-center gap-2 mb-5">
-        <div className="w-2 h-2 rounded-full transition-transform duration-300 group-hover:scale-125" style={{ background: "#082A7B" }} />
-        <span className="text-[9px] font-black uppercase tracking-[0.32em]" style={{ color: "#4B73D4" }}>{stage.stage}</span>
+        <div className="w-2 h-2 rounded-full transition-transform duration-300 group-hover:scale-125" style={{ background: "var(--primary)" }} />
+        <span className="text-[9px] font-black uppercase tracking-[0.32em]" style={{ color: "var(--primary)" }}>{stage.stage}</span>
       </div>
 
       <h3 className="text-[1.6rem] font-black mb-3 transition-colors duration-300" style={{ color: hovered ? "#EDEDED" : "rgba(237,237,237,0.7)" }}>
         {stage.title}
       </h3>
 
-      <div className="w-8 h-px mb-4" style={{ background: "rgba(75,115,212,0.4)" }} />
+      <div className="w-8 h-px mb-4" style={{ background: "rgba(194,164,109,0.4)" }} />
       <p className="text-sm leading-relaxed mb-4" style={{ color: "rgba(237,237,237,0.55)" }}>{stage.description}</p>
 
       <div className="overflow-hidden transition-all duration-500" style={{ maxHeight: hovered ? 90 : 0, opacity: hovered ? 1 : 0 }}>
         <p className="text-xs leading-relaxed" style={{ color: "rgba(237,237,237,0.42)" }}>{stage.detail}</p>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 h-px transition-opacity duration-500" style={{ background: "linear-gradient(90deg, transparent, rgba(75,115,212,0.5), transparent)", opacity: hovered ? 1 : 0 }} />
+      <div className="absolute bottom-0 left-0 right-0 h-px transition-opacity duration-500" style={{ background: "linear-gradient(90deg, transparent, rgba(194,164,109,0.5), transparent)", opacity: hovered ? 1 : 0 }} />
     </div>
   )
 }
@@ -87,7 +87,7 @@ function TiltCard({ stage, idx, total }: { stage: (typeof stages)[0]; idx: numbe
 export function SystemSection() {
   return (
     <section id="system" className="py-32 relative overflow-hidden" style={{ background: "#111115" }}>
-      <div className="absolute inset-x-0 top-0 h-64 pointer-events-none" style={{ background: "radial-gradient(ellipse 70% 100% at 50% 0%, rgba(8,42,123,0.12), transparent)" }} />
+      <div className="absolute inset-x-0 top-0 h-64 pointer-events-none" style={{ background: "radial-gradient(ellipse 70% 100% at 50% 0%, rgba(194,164,109,0.12), transparent)" }} />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
         <motion.div
@@ -98,11 +98,11 @@ export function SystemSection() {
           transition={{ duration: 0.7, ease }}
         >
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-8 h-px" style={{ background: "#082A7B" }} />
-            <span className="text-[9px] font-black uppercase tracking-[0.38em]" style={{ color: "#4B73D4" }}>How We Operate</span>
+            <div className="w-8 h-px" style={{ background: "var(--primary)" }} />
+            <span className="text-[9px] font-black uppercase tracking-[0.38em]" style={{ color: "var(--primary)" }}>How We Operate</span>
           </div>
           <h2 className="text-[clamp(2.4rem,5vw,4rem)] font-black tracking-tight leading-none" style={{ color: "#EDEDED" }}>
-            The BLACKLINE<br /><span style={{ color: "rgba(237,237,237,0.38)" }}>System</span>
+            The LOECHSAR<br /><span style={{ color: "rgba(237,237,237,0.38)" }}>System</span>
           </h2>
         </motion.div>
 

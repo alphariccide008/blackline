@@ -38,18 +38,18 @@ export function Preloader() {
       }}
     >
       {/* Corner accents */}
-      <div className="absolute top-8 left-8 w-10 h-10" style={{ borderTop: "1px solid rgba(8,42,123,0.55)", borderLeft: "1px solid rgba(8,42,123,0.55)" }} />
-      <div className="absolute top-8 right-8 w-10 h-10" style={{ borderTop: "1px solid rgba(8,42,123,0.55)", borderRight: "1px solid rgba(8,42,123,0.55)" }} />
-      <div className="absolute bottom-8 left-8 w-10 h-10" style={{ borderBottom: "1px solid rgba(8,42,123,0.55)", borderLeft: "1px solid rgba(8,42,123,0.55)" }} />
-      <div className="absolute bottom-8 right-8 w-10 h-10" style={{ borderBottom: "1px solid rgba(8,42,123,0.55)", borderRight: "1px solid rgba(8,42,123,0.55)" }} />
+      <div className="absolute top-8 left-8 w-10 h-10" style={{ borderTop: "1px solid rgba(194,164,109,0.55)", borderLeft: "1px solid rgba(194,164,109,0.55)" }} />
+      <div className="absolute top-8 right-8 w-10 h-10" style={{ borderTop: "1px solid rgba(194,164,109,0.55)", borderRight: "1px solid rgba(194,164,109,0.55)" }} />
+      <div className="absolute bottom-8 left-8 w-10 h-10" style={{ borderBottom: "1px solid rgba(194,164,109,0.55)", borderLeft: "1px solid rgba(194,164,109,0.55)" }} />
+      <div className="absolute bottom-8 right-8 w-10 h-10" style={{ borderBottom: "1px solid rgba(194,164,109,0.55)", borderRight: "1px solid rgba(194,164,109,0.55)" }} />
 
       {/* Scan line that travels as progress increases */}
       <div
         className="absolute left-0 right-0 h-px pointer-events-none"
         style={{
           top: `${pct}%`,
-          background: "linear-gradient(90deg, transparent 0%, rgba(8,42,123,0.4) 20%, rgba(75,115,212,0.9) 50%, rgba(8,42,123,0.4) 80%, transparent 100%)",
-          boxShadow: "0 0 10px rgba(75,115,212,0.5)",
+          background: "linear-gradient(90deg, transparent 0%, rgba(194,164,109,0.18) 20%, rgba(194,164,109,0.95) 50%, rgba(194,164,109,0.18) 80%, transparent 100%)",
+            boxShadow: "0 0 10px rgba(194,164,109,0.45)",
           transition: "top 0.06s linear",
         }}
       />
@@ -58,23 +58,8 @@ export function Preloader() {
       <div className="absolute inset-0 flex flex-col items-center justify-center">
 
         {/* Logo — stroke-draw via CSS class defined in globals.css */}
-        <div className="mb-10" style={{ animation: "pl-fade-in 0.5s ease both" }}>
-          <svg width="78" height="78" viewBox="0 0 72 72" fill="none">
-            <rect
-              x="2" y="2" width="68" height="68" rx="16"
-              stroke="#082A7B" strokeWidth="1.5" fill="none"
-              strokeDasharray="280" strokeDashoffset="280"
-              style={{ animation: "draw-rect 1.1s ease forwards" }}
-            />
-            <text
-              x="36" y="46" textAnchor="middle"
-              fill="#082A7B" fontSize="22" fontWeight="900"
-              fontFamily="Poppins, sans-serif" letterSpacing="-1"
-              style={{ animation: "pl-fade-in 0.6s ease 0.45s both" }}
-            >
-              BL
-            </text>
-          </svg>
+          <div className="mb-10" style={{ animation: "pl-fade-in 0.5s ease both" }}>
+          <img src="logo.PNG" alt="Loechsar" width={78} height={78} className="w-40 h-40 object-contain" />
         </div>
 
         {/* Wordmark */}
@@ -86,7 +71,7 @@ export function Preloader() {
             animation: "pl-slide-up 0.65s ease 0.25s both",
           }}
         >
-          BLACK<span style={{ color: "#082A7B" }}>LINE</span>
+          LO <span style={{ color: "var(--primary)" }}>ECHSAR</span>
         </div>
 
         {/* Tagline */}
@@ -109,9 +94,9 @@ export function Preloader() {
               className="h-full rounded-full"
               style={{
                 width: `${pct}%`,
-                background: "linear-gradient(90deg, #1a40a8, #4B73D4)",
+                background: "linear-gradient(90deg, #ECD9B8, var(--primary))",
                 transition: "width 0.08s linear",
-                boxShadow: "0 0 8px rgba(75,115,212,0.55)",
+                boxShadow: "0 0 8px rgba(194,164,109,0.45)",
               }}
             />
           </div>
@@ -119,7 +104,7 @@ export function Preloader() {
             <span style={{ fontSize: "0.52rem", letterSpacing: "0.24em", color: "rgba(255,255,255,0.18)", fontFamily: "monospace", textTransform: "uppercase" }}>
               Loading
             </span>
-            <span style={{ fontSize: "0.58rem", color: "rgba(75,115,212,0.85)", fontFamily: "monospace", fontWeight: 700 }}>
+            <span style={{ fontSize: "0.58rem", color: "var(--primary)", fontFamily: "monospace", fontWeight: 700 }}>
               {pct}
             </span>
           </div>
@@ -131,7 +116,7 @@ export function Preloader() {
         className="absolute bottom-0 left-0 h-[2px]"
         style={{
           width: `${pct}%`,
-          background: "linear-gradient(90deg, #082A7B, #4B73D4)",
+          background: "linear-gradient(90deg, var(--primary), #ECD9B8)",
           transition: "width 0.08s linear",
         }}
       />

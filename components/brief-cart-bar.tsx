@@ -22,17 +22,17 @@ export function BriefCartBar() {
             href="/billboards/brief"
             className="flex items-center justify-between gap-4 px-6 py-4 rounded-2xl text-white shadow-2xl group"
             style={{
-              background: "linear-gradient(135deg, #082A7B 0%, #0d3a9e 100%)",
-              border: "1px solid rgba(75,115,212,0.45)",
-              boxShadow: "0 20px 60px rgba(8,42,123,0.5), 0 0 0 1px rgba(75,115,212,0.15)",
+              background: "linear-gradient(135deg, var(--primary) 0%, #ECD9B8 100%)",
+              border: "1px solid rgba(194,164,109,0.45)",
+              boxShadow: "0 20px 60px rgba(194,164,109,0.18), 0 0 0 1px rgba(194,164,109,0.08)",
             }}
           >
             <div className="flex items-center gap-3">
               {/* Icon with pulse ring */}
               <div className="relative">
-                <div className="absolute inset-0 rounded-xl bg-white/20 animate-ping" style={{ animationDuration: "2s" }} />
+                <div className="absolute inset-0 rounded-xl bg-white/10 animate-ping" style={{ animationDuration: "2s" }} />
                 <div className="relative w-9 h-9 rounded-xl flex items-center justify-center bg-white/15">
-                  <ShoppingBag className="h-4 w-4" />
+                  <ShoppingBag className="h-4 w-4" style={{ color: "var(--primary)" }} />
                 </div>
               </div>
 

@@ -5,11 +5,14 @@ import { ChevronLeft, ChevronRight, Star } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 
 const testimonials = [
-  { quote: "BLACKLINE didn't just redesign our brand — they rewired how our entire team thinks about it. The clarity we now have is worth more than the campaign itself.", name: "Oluwaseun Adeyemi", title: "CEO, Vaultix Financial", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80", rating: 5 },
-  { quote: "We launched in three cities simultaneously. BLACKLINE's OOH strategy and campaign system made us look like we had been there for years. Remarkable execution.", name: "Chidinma Okafor", title: "CMO, Nexus Properties", image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=200&q=80", rating: 5 },
-  { quote: "The strategy work alone changed our market position. When BLACKLINE says 'precision over noise', they mean it — every decision was intentional.", name: "Emeka Nwosu", title: "Founder, TechForge Nigeria", image: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=200&q=80", rating: 5 },
+  { quote: "LOECHSAR didn't just redesign our brand — they rewired how our entire team thinks about it. The clarity we now have is worth more than the campaign itself.", name: "Oluwaseun Adeyemi", title: "CEO, Vaultix Financial", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80", rating: 5 },
+  { quote: "LO ECHSAR didn't just redesign our brand — they rewired how our entire team thinks about it. The clarity we now have is worth more than the campaign itself.", name: "Oluwaseun Adeyemi", title: "CEO, Vaultix Financial", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80", rating: 5 },
+  { quote: "We launched in three cities simultaneously. LOECHSAR's OOH strategy and campaign system made us look like we had been there for years. Remarkable execution.", name: "Chidinma Okafor", title: "CMO, Nexus Properties", image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=200&q=80", rating: 5 },
+  { quote: "The strategy work alone changed our market position. When LOECHSAR says 'precision over noise', they mean it — every decision was intentional.", name: "Emeka Nwosu", title: "Founder, TechForge Nigeria", image: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=200&q=80", rating: 5 },
+  { quote: "The strategy work alone changed our market position. When LO ECHSAR says 'precision over noise', they mean it — every decision was intentional.", name: "Emeka Nwosu", title: "Founder, TechForge Nigeria", image: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=200&q=80", rating: 5 },
   { quote: "They brought clarity to a brand that had been speaking in too many directions. Three months later, our inbound inquiries doubled without any paid media.", name: "Adunola Bello", title: "MD, Crescent Agro", image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80", rating: 5 },
-  { quote: "BLACKLINE's outdoor activation in Lagos was the most impactful brand moment we've had in seven years. People were talking about it like it was a cultural event.", name: "Babatunde Adegoke", title: "Director, Lagos Cultural Board", image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=200&q=80", rating: 5 },
+  { quote: "LOECHSAR's outdoor activation in Lagos was the most impactful brand moment we've had in seven years. People were talking about it like it was a cultural event.", name: "Babatunde Adegoke", title: "Director, Lagos Cultural Board", image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=200&q=80", rating: 5 },
+  { quote: "LO ECHSAR's outdoor activation in Lagos was the most impactful brand moment we've had in seven years. People were talking about it like it was a cultural event.", name: "Babatunde Adegoke", title: "Director, Lagos Cultural Board", image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=200&q=80", rating: 5 },
 ]
 
 const ease = [0.16, 1, 0.3, 1] as const
@@ -43,7 +46,7 @@ export function Testimonials() {
 
   return (
     <section className="py-32 relative overflow-hidden" style={{ background: "#111115" }}>
-      <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse 60% 50% at 50% 50%, rgba(8,42,123,0.1), transparent)" }} />
+      <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse 60% 50% at 50% 50%, rgba(194,164,109,0.1), transparent)" }} />
 
       <div className="max-w-5xl mx-auto px-6 lg:px-12 relative z-10">
 
@@ -55,10 +58,10 @@ export function Testimonials() {
           transition={{ duration: 0.7, ease }}
         >
           <div className="flex items-center justify-center gap-3 mb-6">
-            <div className="w-8 h-px" style={{ background: "#082A7B" }} />
-            <span className="text-[9px] font-black uppercase tracking-[0.38em]" style={{ color: "#4B73D4" }}>What Clients Say</span>
-            <div className="w-8 h-px" style={{ background: "#082A7B" }} />
-          </div>
+            <div className="w-8 h-px" style={{ background: "var(--primary)" }} />
+            <span className="text-[9px] font-black uppercase tracking-[0.38em]" style={{ color: "var(--primary)" }}>What Clients Say</span>
+            <div className="w-8 h-px" style={{ background: "var(--primary)" }} />
+              </div>
           <h2 className="text-[clamp(2.4rem,5vw,4rem)] font-black tracking-tight leading-none" style={{ color: "#EDEDED" }}>
             The Evidence<br /><span style={{ color: "rgba(237,237,237,0.38)" }}>Speaks</span>
           </h2>
@@ -81,12 +84,12 @@ export function Testimonials() {
               className="relative p-8 md:p-12 rounded-2xl overflow-hidden"
               style={{ background: "#17171C", border: "1px solid rgba(255,255,255,0.07)" }}
             >
-              <div className="absolute top-0 left-0 w-24 h-[1px]" style={{ background: "linear-gradient(90deg, #4B73D4, transparent)" }} />
-              <div className="absolute top-0 left-0 h-24 w-[1px]" style={{ background: "linear-gradient(180deg, #4B73D4, transparent)" }} />
+              <div className="absolute top-0 left-0 w-24 h-[1px]" style={{ background: "linear-gradient(90deg, var(--primary), transparent)" }} />
+              <div className="absolute top-0 left-0 h-24 w-[1px]" style={{ background: "linear-gradient(180deg, var(--primary), transparent)" }} />
 
               <div className="flex gap-1 mb-8">
                 {Array.from({ length: t.rating }).map((_, i) => (
-                  <Star key={i} className="h-4 w-4 fill-current" style={{ color: "#4B73D4" }} />
+                  <Star key={i} className="h-4 w-4 fill-current" style={{ color: "var(--primary)" }} />
                 ))}
               </div>
 
@@ -115,8 +118,8 @@ export function Testimonials() {
           transition={{ duration: 0.5, delay: 0.3, ease }}
         >
           <div className="flex gap-2">
-            {testimonials.map((_, i) => (
-              <button key={i} onClick={() => goTo(i)} aria-label={`Testimonial ${i + 1}`} className="rounded-full transition-all duration-300" style={{ width: i === cur ? 28 : 8, height: 8, background: i === cur ? "#082A7B" : "rgba(255,255,255,0.15)" }} />
+                {testimonials.map((_, i) => (
+              <button key={i} onClick={() => goTo(i)} aria-label={`Testimonial ${i + 1}`} className="rounded-full transition-all duration-300" style={{ width: i === cur ? 28 : 8, height: 8, background: i === cur ? "var(--primary)" : "rgba(255,255,255,0.15)" }} />
             ))}
           </div>
           <div className="flex gap-2">

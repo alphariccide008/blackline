@@ -37,11 +37,11 @@ function StatCard({ stat, started, idx }: { stat: (typeof stats)[0]; started: bo
       viewport={{ once: true, amount: 0.2 }}
       transition={{ type: "spring", stiffness: 260, damping: 22, delay: idx * 0.1 }}
     >
-      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl pointer-events-none" style={{ background: "radial-gradient(ellipse at top left, rgba(8,42,123,0.15), transparent 70%)" }} />
-      <div className="absolute top-0 left-0 right-0 h-[1px] opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ background: "linear-gradient(90deg, #082A7B, transparent)" }} />
+      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl pointer-events-none" style={{ background: "radial-gradient(ellipse at top left, rgba(194,164,109,0.15), transparent 70%)" }} />
+      <div className="absolute top-0 left-0 right-0 h-[1px] opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ background: "linear-gradient(90deg, var(--primary), transparent)" }} />
 
       <div className="relative z-10">
-        <div className="text-5xl md:text-6xl font-black leading-none mb-3" style={{ color: "#4B73D4" }}>
+        <div className="text-5xl md:text-6xl font-black leading-none mb-3" style={{ color: "var(--primary)" }}>
           {count}{stat.suffix}
         </div>
         <div className="text-xs font-bold uppercase tracking-[0.25em] mb-4" style={{ color: "rgba(237,237,237,0.55)" }}>{stat.label}</div>
@@ -62,7 +62,7 @@ export function StatsSection() {
 
   return (
     <section ref={ref} className="py-24 relative overflow-hidden" style={{ background: "#0A0A0C" }}>
-      <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse 80% 60% at 50% 100%, rgba(8,42,123,0.1), transparent)" }} />
+      <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse 80% 60% at 50% 100%, rgba(194,164,109,0.1), transparent)" }} />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
         <motion.div
@@ -73,9 +73,9 @@ export function StatsSection() {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="w-8 h-px" style={{ background: "#082A7B" }} />
-            <span className="text-[9px] font-black uppercase tracking-[0.38em]" style={{ color: "#4B73D4" }}>By the Numbers</span>
-            <div className="w-8 h-px" style={{ background: "#082A7B" }} />
+            <div className="w-8 h-px" style={{ background: "var(--primary)" }} />
+            <span className="text-[9px] font-black uppercase tracking-[0.38em]" style={{ color: "var(--primary)" }}>By the Numbers</span>
+            <div className="w-8 h-px" style={{ background: "var(--primary)" }} />
           </div>
           <h2 className="text-[clamp(2rem,4vw,3.2rem)] font-black tracking-tight" style={{ color: "#EDEDED" }}>
             Results That<br /><span style={{ color: "rgba(237,237,237,0.38)" }}>Define the Work</span>

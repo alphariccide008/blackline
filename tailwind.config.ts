@@ -14,24 +14,38 @@ const config: Config = {
         sans: ["Poppins", "Poppins Fallback", "system-ui", "sans-serif"],
       },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-        card: {
-          DEFAULT: "var(--card)",
-          foreground: "var(--card-foreground)",
-        },
-        primary: {
-          DEFAULT: "var(--primary)",
-          foreground: "var(--primary-foreground)",
-          light: "var(--primary-light)",
-        },
-        muted: {
-          DEFAULT: "var(--muted)",
-          foreground: "var(--muted-foreground)",
-        },
-        border: "var(--border)",
-        input: "var(--input)",
-        ring: "var(--ring)",
+          background: "var(--background)",
+          foreground: "var(--foreground)",
+          card: {
+            DEFAULT: "var(--card)",
+            foreground: "var(--card-foreground)",
+          },
+          primary: {
+            DEFAULT: "var(--primary)",
+            foreground: "var(--primary-foreground)",
+            light: "var(--primary-light)",
+          },
+          muted: {
+            DEFAULT: "var(--muted)",
+            foreground: "var(--muted-foreground)",
+          },
+          border: "var(--border)",
+          input: "var(--input)",
+          ring: "var(--ring)",
+          accentAlt: "var(--accent-alt)",
+          // Map Tailwind's blue utilities to the brand primary (Muted Gold)
+          blue: {
+            50: "var(--primary-light)",
+            100: "var(--primary-light)",
+            200: "var(--primary-light)",
+            300: "var(--primary)",
+            400: "var(--primary)",
+            500: "var(--primary)",
+            600: "var(--primary)",
+            700: "var(--primary)",
+            800: "var(--primary)",
+            900: "var(--primary)",
+          },
       },
       borderRadius: {
         lg: "var(--radius)",

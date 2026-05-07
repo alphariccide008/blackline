@@ -25,7 +25,7 @@ const slides = [
     image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1800&q=85&auto=format&fit=crop",
     label: "Growth Activation",
     headline: ["Your Brand.", "Every Place."],
-    sub: "Outdoor, digital, experiential — BLACKLINE activates brands where audiences live, move, and decide.",
+    sub: "Outdoor, digital, experiential — LOECHSAR activates brands where audiences live, move, and decide.",
     cta: { label: "Start a Project", href: "/contact" },
     cta2: { label: "View Work", href: "/projects" },
   },
@@ -108,7 +108,7 @@ export function Hero() {
               className="flex items-center gap-3 mb-7"
               style={{ animation: "fade-in-up 0.6s ease-out forwards", opacity: 0 }}
             >
-              <span className="h-px w-10 block flex-shrink-0" style={{ background: "#082A7B" }} />
+              <span className="h-px w-10 block flex-shrink-0" style={{ background: "var(--primary)" }} />
               <span className="text-[10px] font-black tracking-[0.3em] uppercase" style={{ color: "rgba(255,255,255,0.65)" }}>
                 {s.label}
               </span>
@@ -154,10 +154,10 @@ export function Hero() {
               className="flex flex-wrap gap-4"
               style={{ animation: "fade-in-up 0.7s ease-out 0.38s forwards", opacity: 0 }}
             >
-              <Link
+                <Link
                 href={s.cta.href}
                 className="group flex items-center gap-3 px-8 py-3.5 rounded-full text-sm font-black text-white transition-all duration-300 hover:opacity-90 hover:shadow-2xl hover:-translate-y-0.5"
-                style={{ background: "#082A7B" }}
+                style={{ background: "var(--primary)" }}
               >
                 {s.cta.label}
                 <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -207,7 +207,7 @@ export function Hero() {
           <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/8">
             {stats.map((st) => (
               <div key={st.label} className="flex flex-col items-center py-5 px-4">
-                <span className="text-2xl md:text-3xl font-black leading-none" style={{ color: "#4B73D4" }}>
+                <span className="text-2xl md:text-3xl font-black leading-none" style={{ color: "var(--primary)" }}>
                   {st.value}
                 </span>
                 <span className="text-[10px] uppercase tracking-[0.22em] mt-1.5" style={{ color: "rgba(255,255,255,0.42)" }}>

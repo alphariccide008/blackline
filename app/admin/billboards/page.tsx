@@ -26,7 +26,7 @@ function FormField({ label, required, children }: { label: string; required?: bo
   return (
     <div>
       <label className="block text-[11px] font-bold text-white/40 mb-1.5">
-        {label} {required && <span className="text-[#4B73D4]">*</span>}
+        {label} {required && <span className="text-[var(--primary)]">*</span>}
       </label>
       {children}
     </div>
@@ -135,7 +135,7 @@ export default function AdminBillboards() {
         <button
           onClick={openAdd}
           className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-black text-white transition-all hover:opacity-90"
-          style={{ background: "#082A7B" }}
+          style={{ background: "var(--primary)" }}
         >
           <Plus className="h-4 w-4" /> Add Billboard
         </button>
@@ -178,7 +178,7 @@ export default function AdminBillboards() {
                   </td>
                   <td className="px-5 py-4">
                     <div className="flex items-center gap-1.5">
-                      <MapPin className="h-3.5 w-3.5 flex-shrink-0" style={{ color: "#4B73D4" }} />
+                      <MapPin className="h-3.5 w-3.5 flex-shrink-0" style={{ color: "var(--primary)" }} />
                       <span className="text-xs text-white/55 whitespace-nowrap">{b.location}</span>
                     </div>
                     <p className="text-[10px] text-white/25 mt-0.5">{b.state}</p>
@@ -300,7 +300,7 @@ export default function AdminBillboards() {
               <div className="flex gap-6">
                 <label className="flex items-center gap-2 cursor-pointer select-none">
                   <div
-                    className={`w-10 h-5 rounded-full relative transition-colors ${modal.data.illuminated ? "bg-[#082A7B]" : "bg-white/10"}`}
+                    className={`w-10 h-5 rounded-full relative transition-colors ${modal.data.illuminated ? "bg-[var(--primary)]" : "bg-white/10"}`}
                     onClick={() => update("illuminated", !modal.data.illuminated)}
                   >
                     <div className={`absolute top-0.5 w-4 h-4 rounded-full bg-white transition-all duration-200 ${modal.data.illuminated ? "left-5" : "left-0.5"}`} />
@@ -328,13 +328,13 @@ export default function AdminBillboards() {
                     onChange={(e) => setFeatInput(e.target.value)}
                     onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); addFeature() } }}
                   />
-                  <button onClick={addFeature} className="px-3 py-2 rounded-xl text-xs font-black text-white flex-shrink-0 hover:opacity-90 transition-opacity" style={{ background: "#082A7B" }}>
+                  <button onClick={addFeature} className="px-3 py-2 rounded-xl text-xs font-black text-white flex-shrink-0 hover:opacity-90 transition-opacity" style={{ background: "var(--primary)" }}>
                     Add
                   </button>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {(modal.data.features ?? []).map((f, i) => (
-                    <span key={i} className="flex items-center gap-1.5 text-[11px] font-semibold px-2.5 py-1 rounded-full" style={{ background: "rgba(75,115,212,0.15)", color: "#4B73D4", border: "1px solid rgba(75,115,212,0.25)" }}>
+                    <span key={i} className="flex items-center gap-1.5 text-[11px] font-semibold px-2.5 py-1 rounded-full" style={{ background: "rgba(194,164,109,0.15)", color: "var(--primary)", border: "1px solid rgba(194,164,109,0.25)" }}>
                       {f}
                       <button onClick={() => removeFeature(i)} className="hover:text-white transition-colors">
                         <X className="h-2.5 w-2.5" />
@@ -353,7 +353,7 @@ export default function AdminBillboards() {
                 onClick={handleSave}
                 disabled={saving || !modal.data.title || !modal.data.location || !modal.data.state || !modal.data.size || !modal.data.impressions || !modal.data.image}
                 className="flex items-center gap-2 px-6 py-2.5 rounded-xl text-sm font-black text-white disabled:opacity-40 transition-all hover:opacity-90"
-                style={{ background: "#082A7B" }}
+                style={{ background: "var(--primary)" }}
               >
                 {saving ? <div className="w-4 h-4 rounded-full border-2 border-white/30 border-t-white animate-spin" /> : <Check className="h-4 w-4" />}
                 {modal.mode === "add" ? "Add Billboard" : "Save Changes"}

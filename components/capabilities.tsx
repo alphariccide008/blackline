@@ -20,7 +20,7 @@ export function Capabilities() {
 
   return (
     <section id="services" className="py-32 relative overflow-hidden" style={{ background: "#111115" }}>
-      <div className="absolute inset-0 pointer-events-none" style={{ background: "linear-gradient(135deg, transparent 60%, rgba(8,42,123,0.07) 100%)" }} />
+      <div className="absolute inset-0 pointer-events-none" style={{ background: "linear-gradient(135deg, transparent 60%, rgba(194,164,109,0.07) 100%)" }} />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
 
@@ -33,8 +33,8 @@ export function Capabilities() {
         >
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-8 h-px" style={{ background: "#082A7B" }} />
-              <span className="text-[9px] font-black uppercase tracking-[0.38em]" style={{ color: "#4B73D4" }}>Capabilities</span>
+              <div className="w-8 h-px" style={{ background: "var(--primary)" }} />
+              <span className="text-[9px] font-black uppercase tracking-[0.38em]" style={{ color: "var(--primary)" }}>Capabilities</span>
             </div>
             <h2 className="text-[clamp(2.4rem,5vw,4rem)] font-black tracking-tight leading-none" style={{ color: "#EDEDED" }}>
               What<br />We Do
@@ -63,12 +63,12 @@ export function Capabilities() {
               onMouseEnter={() => setHovered(idx)}
               onMouseLeave={() => setHovered(null)}
             >
-              <div className="absolute inset-0 pointer-events-none transition-opacity duration-300" style={{ opacity: hovered === idx ? 1 : 0, background: "linear-gradient(90deg, rgba(8,42,123,0.1), transparent 70%)" }} />
-              <div className="absolute left-0 top-0 bottom-0 w-[2px] transition-all duration-300" style={{ background: "#4B73D4", opacity: hovered === idx ? 1 : 0, transform: hovered === idx ? "scaleY(1)" : "scaleY(0)", transformOrigin: "top" }} />
+              <div className="absolute inset-0 pointer-events-none transition-opacity duration-300" style={{ opacity: hovered === idx ? 1 : 0, background: "linear-gradient(90deg, rgba(194,164,109,0.1), transparent 70%)" }} />
+              <div className="absolute left-0 top-0 bottom-0 w-[2px] transition-all duration-300" style={{ background: "var(--primary)", opacity: hovered === idx ? 1 : 0, transform: hovered === idx ? "scaleY(1)" : "scaleY(0)", transformOrigin: "top" }} />
 
               <div className="relative flex items-center justify-between gap-6 py-6 pl-6">
                 <div className="flex items-center gap-6 flex-1 min-w-0">
-                  <span className="text-[11px] font-black tracking-[0.25em] flex-shrink-0 transition-colors duration-300 w-8" style={{ color: hovered === idx ? "#4B73D4" : "rgba(237,237,237,0.22)" }}>
+                  <span className="text-[11px] font-black tracking-[0.25em] flex-shrink-0 transition-colors duration-300 w-8" style={{ color: hovered === idx ? "var(--primary)" : "rgba(237,237,237,0.22)" }}>
                     {String(idx + 1).padStart(2, "0")}
                   </span>
                   <h3 className="text-xl sm:text-2xl font-black truncate transition-colors duration-300" style={{ color: hovered === idx ? "#EDEDED" : "rgba(237,237,237,0.62)" }}>
@@ -80,7 +80,7 @@ export function Capabilities() {
                   {cap.description}
                 </p>
 
-                <div className="w-8 h-8 rounded-sm border flex items-center justify-center flex-shrink-0 transition-all duration-300" style={{ borderColor: hovered === idx ? "#4B73D4" : "rgba(255,255,255,0.12)", background: hovered === idx ? "#082A7B" : "transparent" }}>
+                <div className="w-8 h-8 rounded-sm border flex items-center justify-center flex-shrink-0 transition-all duration-300" style={{ borderColor: hovered === idx ? "var(--primary)" : "rgba(255,255,255,0.12)", background: hovered === idx ? "rgba(194,164,109,0.12)" : "transparent" }}>
                   <svg className="w-3.5 h-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7v10" />
                   </svg>

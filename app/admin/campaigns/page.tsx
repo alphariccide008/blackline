@@ -52,7 +52,7 @@ export default function CampaignsPage() {
           <h1 className="text-2xl font-black text-white">Campaigns</h1>
           <p className="text-white/35 text-sm mt-1">Manage all brand campaigns</p>
         </div>
-        <button className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-black text-white transition hover:opacity-85" style={{ background: "#082A7B" }}>
+        <button className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-black text-white transition hover:opacity-85" style={{ background: "var(--primary)" }}>
           <Plus className="h-4 w-4" /> New Campaign
         </button>
       </div>
@@ -117,7 +117,7 @@ export default function CampaignsPage() {
                   <td className="px-5 py-4">
                     <div className="flex gap-1 flex-wrap">
                       {c.channels.map((ch) => (
-                        <span key={ch} className="text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-sm" style={{ background: "rgba(8,42,123,0.2)", color: "#4B73D4" }}>
+                        <span key={ch} className="text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-sm" style={{ background: "rgba(194,164,109,0.12)", color: "var(--primary)" }}>
                           {ch}
                         </span>
                       ))}

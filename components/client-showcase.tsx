@@ -14,8 +14,8 @@ export function ClientShowcase() {
     <section className="py-14 relative overflow-hidden" style={{ background: "#111115", borderTop: "1px solid rgba(255,255,255,0.06)", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
 
       <div className="max-w-7xl mx-auto px-6 mb-8 flex items-center gap-4">
-        <div className="w-8 h-px" style={{ background: "#082A7B" }} />
-        <span className="text-[9px] font-black uppercase tracking-[0.38em]" style={{ color: "#4B73D4" }}>Trusted By</span>
+        <div className="w-8 h-px" style={{ background: "var(--primary)" }} />
+        <span className="text-[9px] font-black uppercase tracking-[0.38em]" style={{ color: "var(--primary)" }}>Trusted By</span>
         <div className="h-px flex-1" style={{ background: "rgba(255,255,255,0.07)" }} />
       </div>
 
@@ -26,7 +26,7 @@ export function ClientShowcase() {
         <div className="flex animate-scroll-infinite pause-animation whitespace-nowrap gap-0" style={{ width: "max-content" }}>
           {doubled.map((name, i) => (
             <div key={i} className="flex items-center gap-10 px-10">
-              <div className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: "rgba(75,115,212,0.5)" }} />
+              <div className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: "rgba(194,164,109,0.5)" }} />
               <span className="text-sm font-bold tracking-wide whitespace-nowrap" style={{ color: "rgba(237,237,237,0.45)" }}>
                 {name}
               </span>

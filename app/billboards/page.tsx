@@ -74,8 +74,8 @@ function BillboardCard({ b, idx }: { b: Billboard; idx: number }) {
         <Link href={`/billboards/${b.id}`} className="group/title">
           <h3 className="text-sm font-black text-white mb-1 leading-snug group-hover/title:text-white/80 transition-colors">{b.title}</h3>
         </Link>
-        <div className="flex items-center gap-1.5 mb-3">
-          <MapPin className="h-3.5 w-3.5 flex-shrink-0" style={{ color: "#4B73D4" }} />
+          <div className="flex items-center gap-1.5 mb-3">
+          <MapPin className="h-3.5 w-3.5 flex-shrink-0" style={{ color: "var(--primary)" }} />
           <span className="text-xs text-white/45 truncate">{b.location}</span>
         </div>
 
@@ -90,8 +90,8 @@ function BillboardCard({ b, idx }: { b: Billboard; idx: number }) {
 
         {/* Impressions */}
         <div className="flex items-center gap-1.5 mb-5">
-          <Zap className="h-3.5 w-3.5" style={{ color: "#4B73D4" }} />
-          <span className="text-xs font-bold" style={{ color: "#4B73D4" }}>{b.impressions} impressions</span>
+          <Zap className="h-3.5 w-3.5" style={{ color: "var(--primary)" }} />
+          <span className="text-xs font-bold" style={{ color: "var(--primary)" }}>{b.impressions} impressions</span>
         </div>
 
         {/* Add to brief button */}
@@ -104,8 +104,8 @@ function BillboardCard({ b, idx }: { b: Billboard; idx: number }) {
                 : "text-white hover:opacity-90"
             }`}
             style={{
-              background: inCart ? "rgba(75,115,212,0.15)" : "#082A7B",
-              border: inCart ? "1px solid rgba(75,115,212,0.4)" : "1px solid transparent",
+              background: inCart ? "rgba(194,164,109,0.15)" : "var(--primary)",
+              border: inCart ? "1px solid rgba(194,164,109,0.4)" : "1px solid transparent",
             }}
           >
             {inCart ? <><Check className="h-3.5 w-3.5" /> Added to Brief</> : <><Plus className="h-3.5 w-3.5" /> Add to Brief</>}
@@ -148,13 +148,13 @@ export default function BillboardsPage() {
         <div className="container-wide">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <div className="flex items-center gap-3 mb-5">
-              <span className="h-px w-8 block" style={{ background: "#082A7B" }} />
+              <span className="h-px w-8 block" style={{ background: "var(--primary)" }} />
               <span className="text-[10px] font-black tracking-[0.3em] uppercase" style={{ color: "rgba(237,237,237,0.4)" }}>
                 Billboard Network
               </span>
             </div>
             <h1 className="text-4xl md:text-6xl font-black text-white tracking-tight mb-4">
-              Find Your<br /><span style={{ color: "#4B73D4" }}>Perfect Spot.</span>
+              Find Your<br /><span style={{ color: "var(--primary)" }}>Perfect Spot.</span>
             </h1>
             <p className="text-white/50 max-w-lg text-base leading-relaxed">
               Browse our premium outdoor inventory across Nigeria. Add billboards to your brief and our team will reach out with availability and strategy.
@@ -210,17 +210,17 @@ export default function BillboardsPage() {
             <div className="flex items-center gap-2 mt-3 flex-wrap">
               <span className="text-[11px] text-white/30 font-semibold">{filtered.length} result{filtered.length !== 1 ? "s" : ""}</span>
               {search && (
-                <button onClick={() => setSearch("")} className="flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-full border" style={{ color: "#4B73D4", borderColor: "rgba(75,115,212,0.3)" }}>
+                <button onClick={() => setSearch("")} className="flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-full border" style={{ color: "var(--primary)", borderColor: "rgba(194,164,109,0.3)" }}>
                   "{search}" <X className="h-2.5 w-2.5" />
                 </button>
               )}
               {selType !== "All Types" && (
-                <button onClick={() => setType("All Types")} className="flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-full border" style={{ color: "#4B73D4", borderColor: "rgba(75,115,212,0.3)" }}>
+                <button onClick={() => setType("All Types")} className="flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-full border" style={{ color: "var(--primary)", borderColor: "rgba(194,164,109,0.3)" }}>
                   {selType} <X className="h-2.5 w-2.5" />
                 </button>
               )}
               {selState !== "All States" && (
-                <button onClick={() => setState("All States")} className="flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-full border" style={{ color: "#4B73D4", borderColor: "rgba(75,115,212,0.3)" }}>
+                <button onClick={() => setState("All States")} className="flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-full border" style={{ color: "var(--primary)", borderColor: "rgba(194,164,109,0.3)" }}>
                   {selState} <X className="h-2.5 w-2.5" />
                 </button>
               )}
@@ -236,7 +236,7 @@ export default function BillboardsPage() {
             <div className="text-center py-24">
               <MapPin className="h-10 w-10 mx-auto mb-4 text-white/20" />
               <p className="text-white/30 text-sm font-semibold">No billboards match your filters</p>
-              <button onClick={() => { setSearch(""); setType("All Types"); setState("All States") }} className="mt-4 text-sm font-bold" style={{ color: "#4B73D4" }}>
+              <button onClick={() => { setSearch(""); setType("All Types"); setState("All States") }} className="mt-4 text-sm font-bold" style={{ color: "var(--primary)" }}>
                 Clear filters
               </button>
             </div>

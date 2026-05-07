@@ -102,7 +102,7 @@ export function ChatWidget() {
         if (idx >= 0) {
           all[idx].messages.push({
             role: "admin",
-            text: `Hi ${name.trim()}! 👋 Welcome to BLACKLINE. I'm here to help — what are you working on?`,
+            text: `Hi ${name.trim()}! 👋 Welcome to LOECHSAR. I'm here to help — what are you working on?`,
             ts: Date.now(),
           })
           saveSessions(all)
@@ -129,7 +129,7 @@ export function ChatWidget() {
         onClick={() => setOpen(!open)}
         aria-label="Open chat"
         className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 hover:scale-105"
-        style={{ background: "#082A7B" }}
+        style={{ background: "var(--primary)" }}
       >
         {open
           ? <X className="h-5 w-5 text-white" />
@@ -152,13 +152,13 @@ export function ChatWidget() {
         {screen === "home" && (
           <div>
             {/* Gradient header */}
-            <div className="relative px-6 pt-8 pb-10 overflow-hidden" style={{ background: "linear-gradient(135deg, #082A7B 0%, #041650 100%)" }}>
-              <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse at bottom right, rgba(75,115,212,0.3), transparent 60%)" }} />
+            <div className="relative px-6 pt-8 pb-10 overflow-hidden" style={{ background: "linear-gradient(135deg, var(--primary) 0%, #9B7B52 100%)" }}>
+              <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse at bottom right, rgba(194,164,109,0.28), transparent 60%)" }} />
               <div className="relative z-10">
                 <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-4" style={{ background: "rgba(255,255,255,0.12)" }}>
                   <MessageCircle className="h-5 w-5 text-white" />
                 </div>
-                <h3 className="text-lg font-black text-white mb-1">BLACKLINE Support</h3>
+                <h3 className="text-lg font-black text-white mb-1">LOECHSAR Support</h3>
                 <p className="text-white/55 text-xs">Usually replies in a few minutes</p>
               </div>
             </div>
@@ -170,7 +170,7 @@ export function ChatWidget() {
                   <div className="w-2.5 h-2.5 rounded-full bg-green-400" />
                 </div>
                 <div>
-                  <p className="text-xs font-bold text-white">BLACKLINE Team</p>
+                  <p className="text-xs font-bold text-white">LOECHSAR Team</p>
                   <p className="text-[10px] text-white/35">Online now</p>
                 </div>
               </div>
@@ -182,7 +182,7 @@ export function ChatWidget() {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder="Your name"
-                  className="w-full px-4 py-3 rounded-xl text-sm text-white placeholder-white/25 outline-none focus:ring-1 ring-[#082A7B] transition"
+                  className="w-full px-4 py-3 rounded-xl text-sm text-white placeholder-white/25 outline-none focus:ring-1 ring-[var(--primary)] transition"
                   style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.08)" }}
                 />
                 <input
@@ -190,7 +190,7 @@ export function ChatWidget() {
                   onChange={(e) => setEmail(e.target.value)}
                   type="email"
                   placeholder="Email address"
-                  className="w-full px-4 py-3 rounded-xl text-sm text-white placeholder-white/25 outline-none focus:ring-1 ring-[#082A7B] transition"
+                  className="w-full px-4 py-3 rounded-xl text-sm text-white placeholder-white/25 outline-none focus:ring-1 ring-[var(--primary)] transition"
                   style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.08)" }}
                   onKeyDown={(e) => e.key === "Enter" && startChat()}
                 />
@@ -200,7 +200,7 @@ export function ChatWidget() {
                 onClick={startChat}
                 disabled={!name.trim() || !email.trim()}
                 className="w-full py-3 rounded-xl text-sm font-black text-white flex items-center justify-center gap-2 transition-all duration-200 disabled:opacity-40 hover:opacity-90"
-                style={{ background: "#082A7B" }}
+                style={{ background: "var(--primary)" }}
               >
                 Start Chat <ArrowRight className="h-4 w-4" />
               </button>
@@ -232,7 +232,7 @@ export function ChatWidget() {
         {screen === "chat" && (
           <div className="flex flex-col h-[520px]">
             {/* Chat header */}
-            <div className="flex items-center gap-3 px-4 py-3" style={{ background: "#082A7B" }}>
+            <div className="flex items-center gap-3 px-4 py-3" style={{ background: "var(--primary)" }}>
               <button onClick={() => setScreen("home")} className="text-white/70 hover:text-white transition-colors">
                 <ChevronLeft className="h-4 w-4" />
               </button>
@@ -240,7 +240,7 @@ export function ChatWidget() {
                 <span className="text-xs font-black text-white">BL</span>
               </div>
               <div className="flex-1">
-                <p className="text-xs font-bold text-white">BLACKLINE Team</p>
+                <p className="text-xs font-bold text-white">LOECHSAR Team</p>
                 <div className="flex items-center gap-1.5">
                   <div className="w-1.5 h-1.5 rounded-full bg-green-400" />
                   <span className="text-[10px] text-white/60">Online</span>
@@ -255,7 +255,7 @@ export function ChatWidget() {
                   <div
                     className="max-w-[75%] px-4 py-2.5 rounded-2xl text-xs leading-relaxed"
                     style={{
-                      background: m.role === "client" ? "#082A7B" : "rgba(255,255,255,0.08)",
+                      background: m.role === "client" ? "var(--primary)" : "rgba(255,255,255,0.08)",
                       color: m.role === "client" ? "#fff" : "rgba(255,255,255,0.82)",
                       borderRadius: m.role === "client" ? "18px 18px 4px 18px" : "18px 18px 18px 4px",
                     }}
@@ -273,7 +273,7 @@ export function ChatWidget() {
                       <div
                         key={i}
                         className="w-1.5 h-1.5 rounded-full animate-pulse-dot"
-                        style={{ background: "#082A7B", animationDelay: `${i * 0.2}s` }}
+                        style={{ background: "var(--primary)", animationDelay: `${i * 0.2}s` }}
                       />
                     ))}
                   </div>
@@ -296,7 +296,7 @@ export function ChatWidget() {
                   onClick={() => send()}
                   disabled={!input.trim()}
                   className="w-7 h-7 rounded-full flex items-center justify-center transition-all disabled:opacity-30"
-                  style={{ background: "#082A7B" }}
+                  style={{ background: "var(--primary)" }}
                   aria-label="Send"
                 >
                   <Send className="h-3.5 w-3.5 text-white" />

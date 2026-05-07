@@ -10,7 +10,7 @@ export function CtaSection() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <motion.div
           className="relative rounded-2xl overflow-hidden p-12 md:p-20"
-          style={{ background: "linear-gradient(135deg, #082A7B 0%, #041650 60%, #030612 100%)" }}
+          style={{ background: "linear-gradient(135deg, var(--primary) 0%, #9B7B52 60%, #030612 100%)" }}
           initial={{ opacity: 0, y: 60, scale: 0.96 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -23,7 +23,7 @@ export function CtaSection() {
           <div className="absolute bottom-6 right-6 w-12 h-12 border-r border-b border-white/15 pointer-events-none" />
 
           {/* Glow */}
-          <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse 50% 80% at 80% 50%, rgba(75,115,212,0.2), transparent)" }} />
+          <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse 50% 80% at 80% 50%, rgba(194,164,109,0.18), transparent)" }} />
 
           <div className="relative z-10 text-center max-w-2xl mx-auto">
             <motion.div
@@ -55,7 +55,7 @@ export function CtaSection() {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.6, delay: 0.28, ease: [0.16, 1, 0.3, 1] }}
             >
-              Build a brief, schedule a strategy session, or simply reach out. The BLACKLINE system is ready.
+              Build a brief, schedule a strategy session, or simply reach out. The LOECHSAR system is ready.
             </motion.p>
 
             <motion.div
@@ -65,9 +65,9 @@ export function CtaSection() {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.6, delay: 0.36, ease: [0.16, 1, 0.3, 1] }}
             >
-              <Link
+                <Link
                 href="/#brief"
-                className="group flex items-center gap-3 px-8 py-4 rounded-full text-sm font-black text-[#082A7B] bg-white hover:bg-white/90 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl"
+                className="group flex items-center gap-3 px-8 py-4 rounded-full text-sm font-black text-[var(--primary)] bg-white hover:bg-white/90 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl"
               >
                 Build a Brief
                 <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />

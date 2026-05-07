@@ -38,7 +38,7 @@ export function BuildBrief() {
 
   return (
     <section id="brief" className="py-32 relative overflow-hidden" style={{ background: "#111115" }}>
-      <div className="absolute top-0 right-0 w-2/3 h-full pointer-events-none" style={{ background: "radial-gradient(ellipse at right top, rgba(8,42,123,0.1), transparent 65%)" }} />
+      <div className="absolute top-0 right-0 w-2/3 h-full pointer-events-none" style={{ background: "radial-gradient(ellipse at right top, rgba(194,164,109,0.12), transparent 65%)" }} />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
 
@@ -50,8 +50,8 @@ export function BuildBrief() {
           transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
         >
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-8 h-px" style={{ background: "#082A7B" }} />
-            <span className="text-[9px] font-black uppercase tracking-[0.38em]" style={{ color: "#4B73D4" }}>Campaign Configuration</span>
+            <div className="w-8 h-px" style={{ background: "var(--primary)" }} />
+            <span className="text-[9px] font-black uppercase tracking-[0.38em]" style={{ color: "var(--primary)" }}>Campaign Configuration</span>
           </div>
           <h2 className="text-[clamp(2.4rem,5vw,4rem)] font-black tracking-tight leading-none" style={{ color: "#EDEDED" }}>
             Build Your Brief
@@ -62,9 +62,9 @@ export function BuildBrief() {
         </motion.div>
 
         {submitted ? (
-          <div className="max-w-md mx-auto text-center py-24">
-            <div className="w-16 h-16 rounded-sm border-2 flex items-center justify-center mx-auto mb-8" style={{ borderColor: "#4B73D4" }}>
-              <Check className="h-7 w-7" style={{ color: "#4B73D4" }} />
+            <div className="max-w-md mx-auto text-center py-24">
+            <div className="w-16 h-16 rounded-sm border-2 flex items-center justify-center mx-auto mb-8" style={{ borderColor: "var(--primary)" }}>
+              <Check className="h-7 w-7" style={{ color: "var(--primary)" }} />
             </div>
             <h3 className="text-2xl font-black mb-3" style={{ color: "#EDEDED" }}>Brief Generated</h3>
             <p className="text-sm leading-relaxed" style={{ color: "rgba(237,237,237,0.52)" }}>
@@ -93,17 +93,17 @@ export function BuildBrief() {
                       key={step.id}
                       onClick={() => (done || idx <= current) && setCurrent(idx)}
                       className="flex items-center gap-3 p-3 text-left transition-all duration-300 min-w-[140px] lg:min-w-0"
-                      style={{ background: active ? "rgba(8,42,123,0.15)" : "transparent", border: active ? "1px solid rgba(75,115,212,0.3)" : "1px solid transparent", borderRadius: "4px" }}
+                      style={{ background: active ? "rgba(194,164,109,0.12)" : "transparent", border: active ? "1px solid rgba(194,164,109,0.3)" : "1px solid transparent", borderRadius: "4px" }}
                     >
                       <div className="w-6 h-6 rounded-sm flex items-center justify-center flex-shrink-0 text-[10px] font-black transition-all" style={{
-                        background: done && !active ? "#082A7B" : "transparent",
-                        border: active ? "1.5px solid #4B73D4" : done ? "none" : "1.5px solid rgba(255,255,255,0.18)",
-                        color: done && !active ? "white" : active ? "#4B73D4" : "rgba(237,237,237,0.28)",
+                        background: done && !active ? "var(--primary)" : "transparent",
+                        border: active ? "1.5px solid var(--primary)" : done ? "none" : "1.5px solid rgba(255,255,255,0.18)",
+                        color: done && !active ? "white" : active ? "var(--primary)" : "rgba(237,237,237,0.28)",
                       }}>
                         {done && !active ? <Check className="h-3 w-3" /> : idx + 1}
                       </div>
                       <div>
-                        <div className="text-[8px] font-black uppercase tracking-widest mb-0.5" style={{ color: active ? "#4B73D4" : "rgba(237,237,237,0.28)" }}>
+                        <div className="text-[8px] font-black uppercase tracking-widest mb-0.5" style={{ color: active ? "var(--primary)" : "rgba(237,237,237,0.28)" }}>
                           Step {idx + 1}
                         </div>
                         <div className="text-xs font-semibold" style={{ color: active ? "#EDEDED" : "rgba(237,237,237,0.45)" }}>
@@ -113,12 +113,12 @@ export function BuildBrief() {
                     </button>
                   )
                 })}
-                <div className="flex items-center gap-3 p-3 min-w-[140px] lg:min-w-0" style={{ background: finalStep ? "rgba(8,42,123,0.15)" : "transparent", border: finalStep ? "1px solid rgba(75,115,212,0.3)" : "1px solid transparent", borderRadius: "4px" }}>
-                  <div className="w-6 h-6 rounded-sm flex items-center justify-center flex-shrink-0 text-[10px] font-black" style={{ border: finalStep ? "1.5px solid #4B73D4" : "1.5px solid rgba(255,255,255,0.18)", color: finalStep ? "#4B73D4" : "rgba(237,237,237,0.28)" }}>
+                <div className="flex items-center gap-3 p-3 min-w-[140px] lg:min-w-0" style={{ background: finalStep ? "rgba(194,164,109,0.12)" : "transparent", border: finalStep ? "1px solid rgba(194,164,109,0.3)" : "1px solid transparent", borderRadius: "4px" }}>
+                  <div className="w-6 h-6 rounded-sm flex items-center justify-center flex-shrink-0 text-[10px] font-black" style={{ border: finalStep ? "1.5px solid var(--primary)" : "1.5px solid rgba(255,255,255,0.18)", color: finalStep ? "var(--primary)" : "rgba(237,237,237,0.28)" }}>
                     {steps.length + 1}
                   </div>
                   <div>
-                    <div className="text-[8px] font-black uppercase tracking-widest mb-0.5" style={{ color: finalStep ? "#4B73D4" : "rgba(237,237,237,0.28)" }}>Final</div>
+                    <div className="text-[8px] font-black uppercase tracking-widest mb-0.5" style={{ color: finalStep ? "var(--primary)" : "rgba(237,237,237,0.28)" }}>Final</div>
                     <div className="text-xs font-semibold" style={{ color: finalStep ? "#EDEDED" : "rgba(237,237,237,0.45)" }}>Contact</div>
                   </div>
                 </div>
@@ -126,7 +126,7 @@ export function BuildBrief() {
 
               <div className="hidden lg:block mt-8">
                 <div className="h-px relative" style={{ background: "rgba(255,255,255,0.08)" }}>
-                  <div className="absolute top-0 left-0 h-full transition-all duration-500" style={{ width: `${(Math.min(current, steps.length) / steps.length) * 100}%`, background: "#4B73D4" }} />
+                  <div className="absolute top-0 left-0 h-full transition-all duration-500" style={{ width: `${(Math.min(current, steps.length) / steps.length) * 100}%`, background: "var(--primary)" }} />
                 </div>
                 <p className="text-[8px] uppercase tracking-widest mt-2" style={{ color: "rgba(237,237,237,0.3)" }}>
                   {Math.round((Math.min(current, steps.length) / steps.length) * 100)}% configured
@@ -139,7 +139,7 @@ export function BuildBrief() {
               {!finalStep ? (
                 <div>
                   <div className="mb-8">
-                    <div className="text-[9px] font-black uppercase tracking-[0.3em] mb-2" style={{ color: "#4B73D4" }}>
+                    <div className="text-[9px] font-black uppercase tracking-[0.3em] mb-2" style={{ color: "var(--primary)" }}>
                       Step {current + 1} / {steps.length}
                     </div>
                     <h3 className="text-2xl font-black mb-1" style={{ color: "#EDEDED" }}>{steps[current].question}</h3>
@@ -155,13 +155,13 @@ export function BuildBrief() {
                           onClick={() => toggle(current, opt)}
                           className="relative p-4 text-left text-sm font-medium rounded-sm transition-all duration-200 border"
                           style={{
-                            background:   sel ? "rgba(8,42,123,0.2)"      : "rgba(255,255,255,0.04)",
-                            borderColor:  sel ? "#4B73D4"                  : "rgba(255,255,255,0.09)",
+                            background:   sel ? "rgba(194,164,109,0.12)" : "rgba(255,255,255,0.04)",
+                            borderColor:  sel ? "var(--primary)"           : "rgba(255,255,255,0.09)",
                             color:        sel ? "#EDEDED"                  : "rgba(237,237,237,0.58)",
                           }}
                         >
                           {sel && (
-                            <span className="absolute top-2 right-2 w-4 h-4 rounded-sm flex items-center justify-center" style={{ background: "#082A7B" }}>
+                            <span className="absolute top-2 right-2 w-4 h-4 rounded-sm flex items-center justify-center" style={{ background: "var(--primary)" }}>
                               <Check className="h-2.5 w-2.5 text-white" />
                             </span>
                           )}
@@ -178,7 +178,7 @@ export function BuildBrief() {
                         onChange={(e) => setCustomLocation(e.target.value)}
                         className="p-4 rounded-sm text-sm focus:outline-none col-span-2 sm:col-span-1 transition-colors placeholder:text-white/25"
                         style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.09)", color: "#EDEDED" }}
-                        onFocus={(e) => (e.currentTarget.style.borderColor = "#4B73D4")}
+                        onFocus={(e) => (e.currentTarget.style.borderColor = "var(--primary)")}
                         onBlur={(e)  => (e.currentTarget.style.borderColor = "rgba(255,255,255,0.09)")}
                       />
                     )}
@@ -199,9 +199,9 @@ export function BuildBrief() {
                       disabled={!canNext}
                       className="flex items-center gap-2 px-7 py-3 text-[10px] font-bold uppercase tracking-widest rounded-sm transition-all"
                       style={{
-                        background: canNext ? "#082A7B" : "rgba(255,255,255,0.07)",
-                        color:      canNext ? "white"   : "rgba(237,237,237,0.28)",
-                        cursor:     canNext ? "pointer" : "not-allowed",
+                        background: canNext ? "var(--primary)" : "rgba(255,255,255,0.07)",
+                        color:      canNext ? "white"         : "rgba(237,237,237,0.28)",
+                        cursor:     canNext ? "pointer"       : "not-allowed",
                       }}
                     >
                       {current < steps.length - 1 ? "Continue" : "Review Brief"}
@@ -212,12 +212,12 @@ export function BuildBrief() {
               ) : (
                 <div>
                   <div className="mb-8">
-                    <div className="text-[9px] font-black uppercase tracking-[0.3em] mb-2" style={{ color: "#4B73D4" }}>Final Step</div>
+                    <div className="text-[9px] font-black uppercase tracking-[0.3em] mb-2" style={{ color: "var(--primary)" }}>Final Step</div>
                     <h3 className="text-2xl font-black mb-1" style={{ color: "#EDEDED" }}>Your Contact Details</h3>
                     <p className="text-xs" style={{ color: "rgba(237,237,237,0.48)" }}>One last step. We&apos;ll send your brief and a strategist will follow up.</p>
                   </div>
 
-                  <div className="mb-8 p-5 rounded-sm space-y-3" style={{ background: "rgba(8,42,123,0.1)", border: "1px solid rgba(75,115,212,0.2)" }}>
+                  <div className="mb-8 p-5 rounded-sm space-y-3" style={{ background: "rgba(194,164,109,0.08)", border: "1px solid rgba(194,164,109,0.18)" }}>
                     {Object.entries(selections).map(([si, opts]) =>
                       opts.length > 0 ? (
                         <div key={si} className="flex items-start gap-3">
@@ -226,7 +226,7 @@ export function BuildBrief() {
                           </span>
                           <div className="flex flex-wrap gap-1.5">
                             {opts.map((o) => (
-                              <span key={o} className="text-[10px] px-2 py-0.5 rounded-sm" style={{ background: "rgba(8,42,123,0.2)", border: "1px solid rgba(75,115,212,0.3)", color: "#4B73D4" }}>
+                              <span key={o} className="text-[10px] px-2 py-0.5 rounded-sm" style={{ background: "rgba(194,164,109,0.12)", border: "1px solid rgba(194,164,109,0.3)", color: "var(--primary)" }}>
                                 {o}
                               </span>
                             ))}
@@ -249,7 +249,7 @@ export function BuildBrief() {
                         placeholder={placeholder}
                         className="p-4 rounded-sm text-sm focus:outline-none transition-colors placeholder:text-white/25"
                         style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.09)", color: "#EDEDED" }}
-                        onFocus={(e) => (e.currentTarget.style.borderColor = "#4B73D4")}
+                        onFocus={(e) => (e.currentTarget.style.borderColor = "var(--primary)")}
                         onBlur={(e)  => (e.currentTarget.style.borderColor = "rgba(255,255,255,0.09)")}
                       />
                     ))}
@@ -266,7 +266,7 @@ export function BuildBrief() {
                     <button
                       onClick={() => (email || phone) && setSubmitted(true)}
                       className="flex items-center gap-2 px-8 py-3 text-[10px] font-bold uppercase tracking-widest rounded-sm transition-all"
-                      style={{ background: "#082A7B", color: "white" }}
+                      style={{ background: "var(--primary)", color: "white" }}
                     >
                       Generate Brief <ChevronRight className="h-3.5 w-3.5" />
                     </button>

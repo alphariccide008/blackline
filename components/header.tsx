@@ -1,5 +1,7 @@
 "use client"
 
+
+
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
@@ -39,7 +41,7 @@ export function Header() {
   const isActive = (href: string) => href === "/" ? pathname === "/" : pathname.startsWith(href)
 
   // Always white/light text — dark site, scrolled bg is also dark
-  const navColor   = (href: string) => isActive(href) ? "#4B73D4" : "rgba(237,237,237,0.72)"
+  const navColor   = (href: string) => isActive(href) ? "var(--primary)" : "rgba(237,237,237,0.72)"
   const logoWord   = "#EDEDED"
   const logoSub    = "rgba(237,237,237,0.38)"
 
@@ -53,17 +55,14 @@ export function Header() {
       }}
     >
       <div className="container-wide">
-        <div className="flex h-20 items-center justify-between gap-6">
+        <div className="flex h-24 items-center justify-between gap-6">
 
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 flex-shrink-0 group">
-            <svg width="38" height="38" viewBox="0 0 72 72" fill="none">
-              <rect x="2" y="2" width="68" height="68" rx="14" stroke="#082A7B" strokeWidth="2" />
-              <text x="36" y="46" textAnchor="middle" fill="#4B73D4" fontSize="22" fontWeight="900" fontFamily="Poppins, sans-serif" letterSpacing="-1">BL</text>
-            </svg>
+          <Link href="/" className="flex items-center gap-1 flex-shrink-0 group">
+            <img src="logo.PNG" alt="Loechsar" width={38} height={38} className="md:w-36 md:h-28 h-30 w-10 object-contain" />
             <div className="flex flex-col leading-none">
               <span className="text-lg font-black tracking-tight" style={{ color: logoWord }}>
-                BLACK<span style={{ color: "#4B73D4" }}>LINE</span>
+                LO <span style={{ color: "var(--primary)" }}>ECHSAR</span>
               </span>
               <span className="text-[9px] tracking-[0.28em] uppercase" style={{ color: logoSub }}>
                 Precision Over Noise
@@ -96,22 +95,22 @@ export function Header() {
             >
               <button
                 className="flex items-center gap-1 text-sm font-semibold transition-colors duration-300 pb-1 hover:text-white"
-                style={{ color: pathname.startsWith("/services") ? "#4B73D4" : "rgba(237,237,237,0.72)" }}
+                style={{ color: pathname.startsWith("/services") ? "var(--primary)" : "rgba(237,237,237,0.72)" }}
               >
                 Services
                 <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${servicesOpen ? "rotate-180" : ""}`} />
               </button>
 
               <div className={`absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[520px] transition-all duration-300 ${servicesOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-2 pointer-events-none"}`}>
-                <div className="rounded-2xl shadow-2xl p-4 overflow-hidden" style={{ background: "#17171C", border: "1px solid rgba(255,255,255,0.09)" }}>
-                  <div className="h-0.5 w-full rounded-full mb-4" style={{ background: "linear-gradient(90deg,#082A7B,#4B73D4,transparent)" }} />
+                  <div className="rounded-2xl shadow-2xl p-4 overflow-hidden" style={{ background: "#17171C", border: "1px solid rgba(255,255,255,0.09)" }}>
+                  <div className="h-0.5 w-full rounded-full mb-4" style={{ background: "linear-gradient(90deg,var(--primary),var(--primary),transparent)" }} />
                   <div className="grid grid-cols-2 gap-1">
                     {services.map((s) => {
                       const Icon = s.icon
                       return (
                         <Link key={s.href} href={s.href} className="flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all duration-200 hover:bg-white/5">
-                          <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: "rgba(8,42,123,0.18)" }}>
-                            <Icon className="h-4 w-4" style={{ color: "#4B73D4" }} />
+                          <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: "rgba(194,164,109,0.12)" }}>
+                            <Icon className="h-4 w-4" style={{ color: "var(--primary)" }} />
                           </div>
                           <span className="text-sm font-medium" style={{ color: "#EDEDED" }}>{s.name}</span>
                         </Link>
@@ -119,7 +118,7 @@ export function Header() {
                     })}
                   </div>
                   <div className="mt-4 pt-3" style={{ borderTop: "1px solid rgba(255,255,255,0.07)" }}>
-                    <Link href="/services" className="flex items-center justify-center gap-2 text-sm font-bold hover:opacity-80 transition-opacity" style={{ color: "#4B73D4" }}>
+                    <Link href="/services" className="flex items-center justify-center gap-2 text-sm font-bold hover:opacity-80 transition-opacity" style={{ color: "var(--primary)" }}>
                       View All Services →
                     </Link>
                   </div>
@@ -141,32 +140,31 @@ export function Header() {
                 {l.label}
               </Link>
             ))}
-          </nav>
-
+              </nav>
           {/* Right CTAs */}
           <div className="hidden lg:flex items-center gap-3">
             <ThemeToggle />
 
             {/* Brief cart button */}
-            <Link
+              <Link
               href="/billboards/brief"
               className="relative flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-bold text-white transition-all duration-300 hover:opacity-90"
-              style={{ background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.12)" }}
+                style={{ background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.12)" }}
             >
-              <ShoppingBag className="h-4 w-4" style={{ color: items.length > 0 ? "#4B73D4" : "rgba(237,237,237,0.5)" }} />
+              <ShoppingBag className="h-4 w-4" style={{ color: items.length > 0 ? "var(--primary)" : "rgba(237,237,237,0.5)" }} />
               <span style={{ color: items.length > 0 ? "#EDEDED" : "rgba(237,237,237,0.5)" }}>Brief</span>
 
               {/* Animated badge */}
               <AnimatePresence>
                 {items.length > 0 && (
-                  <motion.span
+                    <motion.span
                     key={items.length}
                     initial={{ scale: 0, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
                     exit={{ scale: 0, opacity: 0 }}
                     transition={{ type: "spring", stiffness: 400, damping: 18 }}
                     className="absolute -top-1.5 -right-1.5 min-w-[18px] h-[18px] rounded-full flex items-center justify-center text-[10px] font-black text-white"
-                    style={{ background: "#4B73D4", boxShadow: "0 0 0 2px #0A0A0C" }}
+                    style={{ background: "var(--primary)", boxShadow: "0 0 0 2px #0A0A0C" }}
                   >
                     {items.length}
                   </motion.span>
@@ -174,10 +172,10 @@ export function Header() {
               </AnimatePresence>
             </Link>
 
-            <Link
+              <Link
               href="/#brief"
               className="px-6 py-2.5 rounded-full text-sm font-bold text-white transition-all duration-300 hover:opacity-90 hover:shadow-lg"
-              style={{ background: "#082A7B" }}
+              style={{ background: "var(--primary)" }}
             >
               Build Brief
             </Link>
@@ -188,13 +186,13 @@ export function Header() {
             <ThemeToggle />
 
             {/* Mobile brief cart icon */}
-            <Link
+              <Link
               href="/billboards/brief"
               className="relative p-2 rounded-xl transition-all duration-200"
               style={{ border: "1px solid rgba(255,255,255,0.12)", background: "rgba(255,255,255,0.07)" }}
               aria-label="View brief"
             >
-              <ShoppingBag className="h-5 w-5" style={{ color: items.length > 0 ? "#4B73D4" : "rgba(237,237,237,0.6)" }} />
+              <ShoppingBag className="h-5 w-5" style={{ color: items.length > 0 ? "var(--primary)" : "rgba(237,237,237,0.6)" }} />
               <AnimatePresence>
                 {items.length > 0 && (
                   <motion.span
@@ -204,7 +202,7 @@ export function Header() {
                     exit={{ scale: 0 }}
                     transition={{ type: "spring", stiffness: 400, damping: 18 }}
                     className="absolute -top-1 -right-1 min-w-[16px] h-4 rounded-full flex items-center justify-center text-[9px] font-black text-white"
-                    style={{ background: "#4B73D4", boxShadow: "0 0 0 2px #0A0A0C" }}
+                    style={{ background: "var(--primary)", boxShadow: "0 0 0 2px #0A0A0C" }}
                   >
                     {items.length}
                   </motion.span>
@@ -214,7 +212,7 @@ export function Header() {
 
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="p-2 rounded-xl transition-all duration-200"
+                    className="p-2 rounded-xl transition-all duration-200"
               style={{ border: "1px solid rgba(255,255,255,0.12)", background: "rgba(255,255,255,0.07)", color: "#EDEDED" }}
               aria-label="Toggle menu"
             >
@@ -241,8 +239,8 @@ export function Header() {
                   onClick={() => setMobileOpen(false)}
                   className="block px-4 py-3 rounded-xl text-sm font-semibold transition-colors"
                   style={{
-                    color: isActive(l.href) ? "#4B73D4" : "rgba(237,237,237,0.7)",
-                    background: isActive(l.href) ? "rgba(8,42,123,0.12)" : "transparent",
+                    color: isActive(l.href) ? "var(--primary)" : "rgba(237,237,237,0.7)",
+                    background: isActive(l.href) ? "rgba(194,164,109,0.12)" : "transparent",
                   }}
                 >
                   {l.label}
@@ -271,7 +269,7 @@ export function Header() {
                           className="flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm font-medium transition-colors hover:text-white"
                           style={{ color: "rgba(237,237,237,0.55)" }}
                         >
-                          <Icon className="h-4 w-4" style={{ color: "#4B73D4" }} /> {s.name}
+                          <Icon className="h-4 w-4" style={{ color: "var(--primary)" }} /> {s.name}
                         </Link>
                       )
                     })}
@@ -280,11 +278,11 @@ export function Header() {
               </div>
             </nav>
             <div className="mt-6 pt-6 px-4" style={{ borderTop: "1px solid rgba(255,255,255,0.07)" }}>
-              <Link
+                <Link
                 href="/#brief"
                 onClick={() => setMobileOpen(false)}
                 className="flex items-center justify-center w-full py-3.5 rounded-full text-sm font-bold text-white"
-                style={{ background: "#082A7B" }}
+                style={{ background: "var(--primary)" }}
               >
                 Build a Brief
               </Link>

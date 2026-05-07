@@ -7,7 +7,7 @@ import { motion } from "framer-motion"
 const posts = [
   { slug: "why-brand-strategy-must-precede-identity", category: "Brand Strategy",    title: "Why Strategy Must Always Precede Identity",        excerpt: "The most common brand mistake isn't a bad logo. It's a good logo on a poorly defined brand. Before you design anything, define everything.", image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80", readTime: "6 min read", date: "Apr 2026" },
   { slug: "ooh-advertising-in-africa-what-works",      category: "Outdoor Advertising", title: "OOH Advertising in Africa: What Actually Works", excerpt: "Billboards are not just large posters. The geometry of attention, placement, and timing determines whether OOH is investment or waste.", image: "https://images.unsplash.com/photo-1556761175-4b46a572b786?w=800&q=80", readTime: "8 min read", date: "Mar 2026" },
-  { slug: "the-integrated-brand-system",               category: "Identity Systems",  title: "The Integrated Brand System: Why Seven Disciplines", excerpt: "BLACKLINE runs seven disciplines because brand is not one thing. It is a system. Each discipline reinforces the others — or it weakens them.", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80", readTime: "5 min read", date: "Feb 2026" },
+  { slug: "the-integrated-brand-system",               category: "Identity Systems",  title: "The Integrated Brand System: Why Seven Disciplines", excerpt: "Loechsar runs seven disciplines because brand is not one thing. It is a system. Each discipline reinforces the others — or it weakens them.", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80", readTime: "5 min read", date: "Feb 2026" },
 ]
 
 export function BlogSection() {
@@ -24,14 +24,14 @@ export function BlogSection() {
         >
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-8 h-px" style={{ background: "#082A7B" }} />
-              <span className="text-[9px] font-black uppercase tracking-[0.38em]" style={{ color: "#4B73D4" }}>Insights</span>
+              <div className="w-8 h-px" style={{ background: "var(--primary)" }} />
+              <span className="text-[9px] font-black uppercase tracking-[0.38em]" style={{ color: "var(--primary)" }}>Insights</span>
             </div>
             <h2 className="text-[clamp(2.4rem,5vw,4rem)] font-black tracking-tight leading-none" style={{ color: "#EDEDED" }}>
               Ideas That<br /><span style={{ color: "rgba(237,237,237,0.38)" }}>Shape Practice</span>
             </h2>
           </div>
-          <Link href="/blog" className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest hover:opacity-80 transition self-end" style={{ color: "#4B73D4" }}>
+          <Link href="/blog" className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest hover:opacity-80 transition self-end" style={{ color: "var(--primary)" }}>
             All Articles <ArrowUpRight className="h-4 w-4" />
           </Link>
         </motion.div>
@@ -53,7 +53,7 @@ export function BlogSection() {
                 <div className="h-48 overflow-hidden relative">
                   <img src={post.image} alt={post.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                   <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 55%)" }} />
-                  <span className="absolute top-3 left-3 text-[9px] font-black uppercase tracking-widest px-2.5 py-1 rounded-sm" style={{ background: "#082A7B", color: "rgba(255,255,255,0.92)" }}>
+                  <span className="absolute top-3 left-3 text-[9px] font-black uppercase tracking-widest px-2.5 py-1 rounded-sm" style={{ background: "var(--primary)", color: "rgba(255,255,255,0.92)" }}>
                     {post.category}
                   </span>
                 </div>

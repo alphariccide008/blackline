@@ -154,7 +154,7 @@ export default function BillboardDetailPage() {
                     className="rounded-xl overflow-hidden transition-all duration-200"
                     style={{
                       height: 72,
-                      border: activeImg === i ? "2px solid #4B73D4" : "2px solid rgba(255,255,255,0.08)",
+                      border: activeImg === i ? "2px solid var(--primary)" : "2px solid rgba(255,255,255,0.08)",
                       opacity: activeImg === i ? 1 : 0.55,
                     }}
                   >
@@ -208,7 +208,7 @@ export default function BillboardDetailPage() {
                 <div className="grid sm:grid-cols-2 gap-3">
                   {board.features.map((feat) => (
                     <div key={feat} className="flex items-start gap-2.5">
-                      <CheckCircle2 className="h-4 w-4 flex-shrink-0 mt-0.5" style={{ color: "#4B73D4" }} />
+                      <CheckCircle2 className="h-4 w-4 flex-shrink-0 mt-0.5" style={{ color: "var(--primary)" }} />
                       <span className="text-sm" style={{ color: "rgba(237,237,237,0.65)" }}>{feat}</span>
                     </div>
                   ))}
@@ -225,21 +225,21 @@ export default function BillboardDetailPage() {
               >
                 <h3 className="text-base font-black text-white mb-2">Best For</h3>
                 <div className="flex items-center gap-1.5 mb-4">
-                  <LayoutGrid className="h-3.5 w-3.5" style={{ color: "#4B73D4" }} />
+                  <LayoutGrid className="h-3.5 w-3.5" style={{ color: "var(--primary)" }} />
                   <p className="text-xs" style={{ color: "rgba(237,237,237,0.4)" }}>
                     Ideal for brands targeting {board.state} and surrounding markets
                   </p>
                 </div>
                 <div className="flex flex-wrap gap-2">
-                  {bestFor.map((b) => (
-                    <span
-                      key={b}
-                      className="text-xs font-bold px-3 py-1 rounded-full"
-                      style={{ background: "rgba(8,42,123,0.2)", color: "#4B73D4", border: "1px solid rgba(75,115,212,0.25)" }}
-                    >
-                      {b}
-                    </span>
-                  ))}
+                    {bestFor.map((b) => (
+                      <span
+                        key={b}
+                        className="text-xs font-bold px-3 py-1 rounded-full"
+                        style={{ background: "rgba(194,164,109,0.12)", color: "var(--primary)", border: "1px solid rgba(194,164,109,0.25)" }}
+                      >
+                        {b}
+                      </span>
+                    ))}
                 </div>
               </motion.div>
             </div>
@@ -258,25 +258,25 @@ export default function BillboardDetailPage() {
                   style={{ background: "#17171C", border: "1px solid rgba(255,255,255,0.09)" }}
                 >
                   {/* Blue accent line */}
-                  <div className="h-1" style={{ background: "linear-gradient(90deg,#082A7B,#4B73D4)" }} />
+                  <div className="h-1" style={{ background: "linear-gradient(90deg,var(--primary),transparent)" }} />
 
                   <div className="p-6">
                     <h2 className="text-lg font-black text-white mb-1 leading-snug">{board.title}</h2>
                     <div className="flex items-center gap-1.5 mb-5">
-                      <MapPin className="h-3.5 w-3.5 flex-shrink-0" style={{ color: "#4B73D4" }} />
+                      <MapPin className="h-3.5 w-3.5 flex-shrink-0" style={{ color: "var(--primary)" }} />
                       <span className="text-xs" style={{ color: "rgba(237,237,237,0.45)" }}>{board.location}</span>
                     </div>
 
                     {/* Impressions highlight */}
                     <div
                       className="flex items-center gap-2.5 rounded-xl px-4 py-3 mb-5"
-                      style={{ background: "rgba(8,42,123,0.15)", border: "1px solid rgba(75,115,212,0.2)" }}
-                    >
-                      <Eye className="h-4 w-4 flex-shrink-0" style={{ color: "#4B73D4" }} />
-                      <span className="text-sm" style={{ color: "rgba(237,237,237,0.7)" }}>
-                        <span className="font-black" style={{ color: "#4B73D4" }}>{board.impressions}</span> impressions
-                      </span>
-                    </div>
+                      style={{ background: "rgba(194,164,109,0.12)", border: "1px solid rgba(194,164,109,0.2)" }}
+                      >
+                        <Eye className="h-4 w-4 flex-shrink-0" style={{ color: "var(--primary)" }} />
+                        <span className="text-sm" style={{ color: "rgba(237,237,237,0.7)" }}>
+                          <span className="font-black" style={{ color: "var(--primary)" }}>{board.impressions}</span> impressions
+                        </span>
+                      </div>
 
                     {/* No price — brief CTA */}
                     <div className="mb-5 pb-5" style={{ borderBottom: "1px solid rgba(255,255,255,0.07)" }}>
@@ -292,8 +292,8 @@ export default function BillboardDetailPage() {
                         onClick={() => inCart ? remove(board.id) : add(board)}
                         className="w-full py-3.5 rounded-xl text-sm font-black text-white flex items-center justify-center gap-2.5 transition-all duration-200 hover:opacity-90"
                         style={{
-                          background: inCart ? "rgba(75,115,212,0.15)" : "#082A7B",
-                          border: inCart ? "1px solid rgba(75,115,212,0.4)" : "1px solid transparent",
+                          background: inCart ? "rgba(194,164,109,0.12)" : "var(--primary)",
+                          border: inCart ? "1px solid rgba(194,164,109,0.4)" : "1px solid transparent",
                         }}
                       >
                         {inCart
@@ -340,7 +340,7 @@ export default function BillboardDetailPage() {
                 {/* Help strip */}
                 <div
                   className="rounded-2xl p-5"
-                  style={{ background: "rgba(8,42,123,0.08)", border: "1px solid rgba(75,115,212,0.12)" }}
+                  style={{ background: "rgba(194,164,109,0.08)", border: "1px solid rgba(194,164,109,0.12)" }}
                 >
                   <p className="text-xs font-black text-white mb-1">Need expert advice?</p>
                   <p className="text-[11px] mb-4" style={{ color: "rgba(237,237,237,0.35)" }}>
@@ -349,7 +349,7 @@ export default function BillboardDetailPage() {
                   <Link
                     href="/contact"
                     className="text-xs font-black flex items-center gap-1 transition-opacity hover:opacity-70"
-                    style={{ color: "#4B73D4" }}
+                    style={{ color: "var(--primary)" }}
                   >
                     Talk to a strategist <ChevronRight className="h-3.5 w-3.5" />
                   </Link>

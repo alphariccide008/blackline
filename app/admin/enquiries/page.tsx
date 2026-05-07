@@ -109,7 +109,7 @@ export default function EnquiriesPage() {
                 className={`w-full flex items-start gap-3 px-4 py-4 border-b border-white/4 hover:bg-white/4 transition-colors text-left ${selected === s.id ? "bg-white/6" : ""}`}
               >
                 <div className="relative flex-shrink-0">
-                  <div className="w-9 h-9 rounded-full flex items-center justify-center text-xs font-black text-white" style={{ background: "rgba(8,42,123,0.4)" }}>
+                  <div className="w-9 h-9 rounded-full flex items-center justify-center text-xs font-black text-white" style={{ background: "rgba(194,164,109,0.4)" }}>
                     {s.name.charAt(0).toUpperCase()}
                   </div>
                   {!s.read && <div className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-green-400 border-2 border-[#030612]" />}
@@ -141,7 +141,7 @@ export default function EnquiriesPage() {
             {/* Chat header */}
             <div className="flex items-center gap-3 px-6 py-4 border-b border-white/6 flex-shrink-0">
               <button className="lg:hidden text-white/50 hover:text-white mr-1" onClick={() => setView("list")}>←</button>
-              <div className="w-9 h-9 rounded-full flex items-center justify-center text-sm font-black text-white" style={{ background: "rgba(8,42,123,0.4)" }}>
+              <div className="w-9 h-9 rounded-full flex items-center justify-center text-sm font-black text-white" style={{ background: "rgba(194,164,109,0.4)" }}>
                 {currentSession.name.charAt(0).toUpperCase()}
               </div>
               <div className="flex-1">
@@ -160,7 +160,7 @@ export default function EnquiriesPage() {
                   <div
                     className="max-w-[70%] px-4 py-2.5 text-sm rounded-2xl leading-relaxed"
                     style={{
-                      background: m.role === "admin" ? "#082A7B" : "rgba(255,255,255,0.08)",
+                      background: m.role === "admin" ? "#C2A46D" : "rgba(255,255,255,0.08)",
                       color: "rgba(255,255,255,0.88)",
                       borderRadius: m.role === "admin" ? "18px 18px 4px 18px" : "18px 18px 18px 4px",
                     }}
@@ -187,7 +187,7 @@ export default function EnquiriesPage() {
                   onClick={sendReply}
                   disabled={!reply.trim()}
                   className="px-4 py-3 rounded-xl font-bold text-white text-sm flex items-center gap-2 transition disabled:opacity-40"
-                  style={{ background: "#082A7B" }}
+                  style={{ background: "#C2A46D" }}
                 >
                   <Send className="h-4 w-4" />
                 </button>
