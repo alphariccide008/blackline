@@ -51,7 +51,7 @@ export function AdminSidebar() {
       {/* Logo */}
         <div className="px-5 py-6 border-b border-white/6">
         <Link href="/admin" className="flex items-center gap-2.5">
-          <img src="/@logo.PNG" alt="Loechsar" width={32} height={32} className="w-8 h-8 object-contain" />
+          <img src="/@logo.svg" alt="Loechsar" width={32} height={32} className="w-8 h-8 object-contain" />
           <div className="flex flex-col leading-none">
             <span className="text-sm font-black text-white">LOECHSAR</span>
             <span className="text-[9px] tracking-widest text-white/30 uppercase">Admin</span>
@@ -113,7 +113,7 @@ export function AdminSidebar() {
       {/* Mobile top bar */}
       <div className="lg:hidden fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-5 py-4" style={{ background: "#050811", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
         <Link href="/admin" className="flex items-center gap-2.5">
-          <img src="/@logo.PNG" alt="Loechsar" width={28} height={28} className="w-7 h-7 object-contain" />
+          <img src="/@logo.svg" alt="Loechsar" width={28} height={28} className="w-7 h-7 object-contain" />
           <span className="text-sm font-black text-white">LOECHSAR Admin</span>
         </Link>
         <button onClick={() => setOpen(!open)} className="text-white/60 hover:text-white">

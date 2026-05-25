@@ -59,7 +59,7 @@ export function Header() {
 
           {/* Logo */}
           <Link href="/" className="flex items-center gap-1 flex-shrink-0 group">
-            <img src="logo.PNG" alt="Loechsar" width={38} height={38} className="md:w-36 md:h-28 h-30 w-10 object-contain" />
+            <img src="/logo.PNG" alt="Loechsar" width={38} height={38} className="md:w-36 md:h-28 h-30 w-10 object-contain" />
             <div className="flex flex-col leading-none">
               <span className="text-lg font-black tracking-tight" style={{ color: logoWord }}>
                 LO <span style={{ color: "var(--primary)" }}>ECHSAR</span>

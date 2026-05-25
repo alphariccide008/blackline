@@ -7,16 +7,16 @@ import { CartProvider } from "@/lib/cart-context"
 import { BriefCartBar } from "@/components/brief-cart-bar"
 
 export const metadata: Metadata = {
-  title: "LO ECHSAR  Structured Brand System",
+  title: "LO ECHSAR - Structured Brand System",
   description:
     "Lo Echsar is a structured brand system. We define, design, and deploy brands across environments with precision.",
   icons: {
-    icon: "/logo.PNG",
-    shortcut: "/logo.PNG",
-    apple: "/logo.PNG",
+    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
+    shortcut: ["/favicon.svg"],
+    apple: [{ url: "/logo.PNG", type: "image/png" }],
   },
   openGraph: {
-    title: "LO ECHSAR  Structured Brand System",
+    title: "LO ECHSAR - Structured Brand System",
     description: "Lo Echsar is a structured brand system. We define, design, and deploy brands across environments with precision.",
     type: "website",
   },

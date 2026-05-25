@@ -59,7 +59,7 @@ export function Preloader() {
 
         {/* Logo — stroke-draw via CSS class defined in globals.css */}
           <div className="mb-10" style={{ animation: "pl-fade-in 0.5s ease both" }}>
-          <img src="logo.PNG" alt="Loechsar" width={78} height={78} className="w-40 h-40 object-contain" />
+          <img src="/logo.PNG" alt="Loechsar" width={78} height={78} className="w-40 h-40 object-contain" />
         </div>
 
         {/* Wordmark */}

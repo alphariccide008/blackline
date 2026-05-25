@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72">
-  <rect width="72" height="72" rx="14" fill="#0A0A0C"/>
-  <rect x="1.5" y="1.5" width="69" height="69" rx="12.5" fill="none" stroke="var(--primary)" stroke-width="3"/>
-  <text x="36" y="47" text-anchor="middle" fill="var(--primary)" font-size="26" font-weight="900" font-family="system-ui, sans-serif" letter-spacing="-1">LO</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="12" fill="#0A0A0C"/>
+  <circle cx="32" cy="28" r="20" fill="#C2A46D"/>
+  <text x="32" y="36" font-family="Arial, sans-serif" font-weight="900" font-size="20" fill="#0A0A0C" text-anchor="middle">LO</text>
 </svg>
